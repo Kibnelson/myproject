@@ -76,7 +76,7 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -148,15 +148,12 @@ USE_TZ = False # changed to false from True so as to pick the current time zo
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static") 
-
+#STATIC_ROOT = os.path.join(BASE_DIR, "static") 
 MEDIA_URL = '/media/' #media root configuration
 MEDIA_ROOT = os.path.join(BASE_DIR,"media") #media root configuration
 
 STATIC_DIRS = 'static'
-STATICFILES_DIRS = [
-
-]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 CONTENT_TYPES = ['file']

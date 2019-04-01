@@ -1,4 +1,4 @@
-{% load static  %}
+ {% load static  %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,7 +16,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+
 	<title>{% block title %}Hello, world!{% endblock %}</title>
+  <!-- Configuring CSS in django website -->
+
+  <link rel="stylesheet" href="{% static 'main/css/style1.css'%}">
 </head>
  
   <body>
@@ -99,6 +104,7 @@
 
 
 <div>
+
 
 </body>
 
