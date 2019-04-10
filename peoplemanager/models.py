@@ -13,7 +13,7 @@ class PeopleDetail(models.Model):
 	bio = models.TextField(max_length=20000,null=True,blank=True)
 	email = models.EmailField(max_length=200,null = True,blank=True)
 	website = models.URLField(max_length=200,null=True, blank=True)
-	headshot = models.ImageField(upload_to='personimage',null=True, blank=True)
+	headshot = models.ImageField(upload_to='personimage',default='personimage/default.png')
 	
 	class Meta:
 		verbose_name_plural = "Person details"
