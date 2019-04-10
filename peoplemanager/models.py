@@ -13,7 +13,7 @@ class PeopleDetail(models.Model):
 	bio = models.TextField(max_length=20000,null=True,blank=True)
 	email = models.EmailField(max_length=200,null = True,blank=True)
 	website = models.URLField(max_length=200,null=True, blank=True)
-	headshot = models.ImageField(upload_to='personimage', null=True, blank=True)
+	headshot = models.ImageField(upload_to='personimage',null=True, blank=True)
 	
 	class Meta:
 		verbose_name_plural = "Person details"
@@ -83,7 +83,7 @@ class StudentDetail(models.Model):
 		)
 	currently_registered = models.CharField(max_length = 3, choices = REGISTRATION_CHOICES)
 	start_date = models.DateField()
-	graduation_date = models.DateField()
+	graduation_date = models.DateField(max_length=200,null=True,blank=True)
 	abstract = models.TextField(max_length=20000,null=True, blank=True)
 	archivesupload_id =models.CharField(max_length =100,null=True, blank=True)
 	class Meta:

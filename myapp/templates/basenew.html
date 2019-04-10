@@ -22,14 +22,21 @@
   <!-- Configuring CSS in django website -->
 
   <link rel="stylesheet" href="{% static 'main/css/style1.css'%}">
+
+
+       <!-- Setting up the box model -->
+   
 </head>
  
   <body>
  <!-- <ul class=”navbar-nav float-xs-right”> -->
 
-         <ul class="nav justify-content-end ">
+ 	
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light"/>
+         <ul class="nav justify-content-end ">
+        
+
+<nav class="navbar navbar-expand-lg navbar-light "/>
 <a class = "navbar-brand" href="#">
 
 	
@@ -94,9 +101,13 @@
 
 </nav>
 
+
   	<div class="container">
   		<br/>
 	{% block content %}
+        
+        
+        
 	{% endblock %}
 	</div>
   
