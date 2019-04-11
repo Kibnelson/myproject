@@ -24,15 +24,22 @@
   <link rel="stylesheet" href="{% static 'main/css/style1.css'%}">
 
   <style>
-        .container1{
+        .containernav{
            /* padding:5px 10px 15px 20px;
             border:5px solid black;
             border-bottom: 15px solid red;
             margin:20px 15px 10px 5px;
             width:100px;
-            height:60px   */  
-            background-color: orange;
-            text-align: center;
+            height:60px   */ 
+            padding-top: 35px;
+ 			 padding-right: 150px;
+ 			 padding-bottom: px;
+  			padding-left: 80px; 
+  			background-color: #731305;
+           
+
+
+            
                 }
        </style>
      
@@ -43,8 +50,9 @@
     <!-- Setting up the box model  first box for Nav bar-->
    
 
-  	 <section class=" container1">
-        <div class="box1 "> <nav class="navbar navbar-expand-lg navbar-light "/>
+  	 <section class=" containernav">
+        <div class="box1 ">
+         <nav class="navbar navbar-expand-lg navbar-dark "/>
 <a class = "navbar-brand" href="#">
 
 	
@@ -56,50 +64,62 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
  
     <ul class="navbar-nav mr-auto">
+    	<li class="nav-item active">
+        <a  class="nav-link" navbar-brand = "mb-0 h1" href="{% url 'home' %}">Contact Us <span class="sr-only">(current)</span></a>
+      </li>
+    	<li class="nav-item active">
+        <a  class="nav-link" navbar-brand = "mb-0 h1" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item active">
         <a  class="nav-link" navbar-brand = "mb-0 h1" href="{% url 'home' %}">Research Themes <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="#">Publications</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item active dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           People
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Core Staff</a>
+           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Research Associates and Fellows</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Technical Support Staff</a>
+             <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Trainees </a>
+             <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Alumni</a>
         </div>
       </li>
-      <li  <li class="nav-item dropdown">
+      <li  <li class="nav-item active dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Opportunities
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Short Courses</a>
+             <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{% url 'intbursary' %}">Postgraduate Bursaries</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Emerging Researcher Funding</a>
+             <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Job Openings </a>
 
       </li>
 
        </li>
-       <li  <li class="nav-item dropdown">
+       <li  <li class="nav-item active dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           News
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Events and Announcements </a>
+             <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Newsletters</a>
 
       </li>
         </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link disabled" href="#">Resources</a>
               </ul>
       </li>
