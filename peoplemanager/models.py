@@ -92,4 +92,4 @@ class StudentDetail(models.Model):
 
 
 	def __str__(self):
-		return self.supervisor + ' | '  + str (self.supervisor) + '|' + str (self.institution) + '|' + str (self.department) +' | '  + str (self.thesis_title)+ ' | ' + str(self.degree) + '|' + str(self.currently_registered) + '|' + str(self.start_date) + '|' + str(self.graduation_date) + '|' + str(self.abstract) + '|' + str(self.archivesupload_id) + '|' 
+		return self.supervisor + ' | ' 
