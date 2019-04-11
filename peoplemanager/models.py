@@ -90,6 +90,5 @@ class StudentDetail(models.Model):
 	class Meta:
 		verbose_name_plural = "Student details"
 
-
 	def __str__(self):
-		return self.supervisor + ' | ' 
+			return self.supervisor + ' | '   + str (self.supervisor_additional) + ' | '  + str (self.institution) + ' | '  + str (self.department) + ' | '  + str (self.thesis_title) + ' | '
