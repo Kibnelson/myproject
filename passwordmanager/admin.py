@@ -7,5 +7,6 @@ class AccountAdmin(ImportExportModelAdmin):
 	list_display = ('id','account_name','username','password','created_at','updated_at')
 	ordering =	['id']
 	search_fields =('account_name','username')
+	list_filter = ['account_name']
 
 admin.site.register(Account, AccountAdmin)
