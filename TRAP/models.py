@@ -173,7 +173,7 @@ class Tsetse(models.Model):
 	tbar93 = models.DecimalField(max_digits=15, decimal_places=10, null=True, blank=True)
 	tbar94 = models.DecimalField(max_digits=15, decimal_places=10, null=True, blank=True)
 	rain = models.DecimalField(max_digits= 6, decimal_places=3, null=True, blank=True)
-	"""
+	
 	cf456 = models.IntegerField(null=True, blank=True)
 	dur = models.IntegerField(null=True, blank=True)
 	tbars = models.DecimalField(max_digits=15, decimal_places=10, null=True, blank=True)
@@ -254,7 +254,7 @@ class Tsetse(models.Model):
 	wlmnew = models.CharField(max_length=50,null=True, blank=True)
 	facwlmold = models.DecimalField(max_digits=15, decimal_places=10, null=True, blank=True)
 
-	"""
+	
 
 	
 
