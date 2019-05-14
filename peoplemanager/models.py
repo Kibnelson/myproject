@@ -7,7 +7,7 @@ from django.utils.safestring import mark_safe
 # Create your models here.
 
 class PeopleDetail(models.Model):
-	
+
 	firstnames = models.CharField(max_length=200)
 	surname	= models.CharField(max_length=200)
 	bio = models.TextField(max_length=20000,null=True,blank=True)
@@ -15,20 +15,20 @@ class PeopleDetail(models.Model):
 	website = models.URLField(max_length=200,null=True, blank=True)
 
 	headshot = models.ImageField(upload_to='personimage',default='personimage/default.png')
-	
+
 	class Meta:
 		verbose_name_plural = "Person details"
-	
-	def __str__(self):
-		return self.firstnames +	' , '  + str (self.surname) 
 
-		# + str (self.bio)+ ' | '  + str (self.email) + ' | ' + str(self.website) + '|' 
+	def __str__(self):
+		return self.firstnames +	' , '  + str (self.surname)
+
+		# + str (self.bio)+ ' | '  + str (self.email) + ' | ' + str(self.website) + '|'
 def image_tag(self):
        return mark_safe('<img src="/personimage/" width="174" height="262" />'  (self.headshot_image))
 
 image_tag.short_description = 'Image'
 
-	
+
 class StaffDetail(models.Model):
 	person_id = models.ForeignKey(PeopleDetail, on_delete=models.CASCADE,related_name='person', null=True, blank=True)
 	#category = models.CharField(max_length=200)
@@ -52,11 +52,11 @@ class StaffDetail(models.Model):
 	termination_date =models.DateField(max_length=200,null=True,blank=True)
 	is_active =models.BooleanField(default=True)
 	def __str__(self):
-		return self.job_title + ' | '  + ' | '  + str (self.category) + ' | '  + str (self.job_title) + ' | '  + str (self.job_description) + ' | '  + str (self.appointment_date) + ' | '  + str (self.termination_date) + ' | '  + str (self.is_active) + ' | ' 
+		return self.job_title + ' | '  + ' | '  + str (self.category) + ' | '  + str (self.job_title) + ' | '  + str (self.job_description) + ' | '  + str (self.appointment_date) + ' | '  + str (self.termination_date) + ' | '  + str (self.is_active) + ' | '
 
 
 class StudentDetail(models.Model):
-	person_id= models.ForeignKey(PeopleDetail, on_delete=models.CASCADE,related_name='supervisor', null=True, blank=True)	
+	person_id= models.ForeignKey(PeopleDetail, on_delete=models.CASCADE,related_name='supervisor', null=True, blank=True)
 	#supervisor = models.ForeignKey(StaffDetail,on_delete=models.CASCADE, related_name='staffperons',null=True,blank=True)
 	#firstnames = models.CharField(max_length=200)
 	#surname	= models.CharField(max_length=200)
@@ -66,18 +66,18 @@ class StudentDetail(models.Model):
 	institution = models.CharField(max_length=500)
 	department = models.CharField(max_length=500, null=True, blank=True)
 	thesis_title =models.TextField(max_length=10000)
-	Hns = 'Hns'
+	Hons = 'Hons'
 	MSc = 'MSc'
 	PhD = 'PhD'
 	ERF = 'ERF'
 	DEGREE_CHOICES = (
-		('Hns','Hns'),
+		('Hons','Hons'),
 		('MSc','MSc'),
 		('PhD','PhD'),
 		('ERF','ERF'),
 		)
 	degree = models.CharField(max_length = 8, choices = DEGREE_CHOICES)
-	
+
 	REGISTRATION_CHOICES = (
 		('No','No'),
 		('Yes','Yes'),
