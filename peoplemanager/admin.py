@@ -7,13 +7,13 @@ import datetime
 from django.utils.safestring import mark_safe
 #""" Register your models here.
 
-class StaffDetailTabularInline(admin.StackedInline): #Tabular inline function and model
+class StaffDetailStackedInline(admin.StackedInline): #Tabular inline function and model
 	model = StaffDetail
 	fields= ('id','category','job_title','job_description','appointment_date','termination_date','is_active', 'person_id') # Fields displayed
 	extra = 1 # this will display only one inline form for one record in the django admin
 	max_num = 1 # this will display a maximum of only one inline forms for two records in the django admin
 
-class StudentDetailTabularInline(admin.StackedInline): # Tabular inline function and model for student details
+class StudentDetailStackedInline(admin.StackedInline): # Tabular inline function and model for student details
 	model = StudentDetail
 	fields = ('supervisor','supervisor_additional','institution','department','thesis_title','degree','currently_registered','start_date','graduation_date','abstract','archivesupload_id','person_id')
 	list_filter =('degree')
