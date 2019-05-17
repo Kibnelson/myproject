@@ -66,12 +66,10 @@ class StudentDetail(models.Model):
 	institution = models.CharField(max_length=500)
 	department = models.CharField(max_length=500, null=True, blank=True)
 	thesis_title =models.TextField(max_length=10000)
-	Hons = 'Hons'
 	MSc = 'MSc'
 	PhD = 'PhD'
 	ERF = 'ERF'
 	DEGREE_CHOICES = (
-		('Hons','Hons'),
 		('MSc','MSc'),
 		('PhD','PhD'),
 		('ERF','ERF'),

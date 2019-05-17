@@ -1,159 +1,199 @@
- {% load static  %}
-<!doctype html>
-<html lang="en">
-  <head>
-  <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Required Jquery -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+ {% load staticfiles %}
+ <!doctype html>
+ <html lang="en">
 
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/jquery.validate.js"></script>
+ <head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+   <!-- Bootstrap core  -->
+   <link rel="stylesheet" href="{% static 'bootstrap4/css/bootstrap.min.css' %}">
+   <!-- Custom css -->
+   <link rel="stylesheet" href="{% static 'bootstrap4/css/style.css' %}">
 
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 
 
-	<title>{% block title %}Hello, world!{% endblock %}</title>
-  <!-- Configuring CSS in django website -->
+   <!-- Required Jquery -->
 
-  <link rel="stylesheet" href="{% static 'main/css/style1.css'%}">
+   <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script-->
 
-  <style>
-        .containernav{
-           /* padding:5px 10px 15px 20px;
-            border:5px solid black;
-            border-bottom: 15px solid red;
-            margin:20px 15px 10px 5px;
-            width:100px;
-            height:60px   */ 
-            padding-top: 15px;
- 			 padding-right: 150px;
- 			 padding-bottom: 15px;
-  			padding-left: 80px; 
-  			width: 100;
-  			height: 60;
-  			background-color: #F7941E  
-                }
-       </style>
-     
-</head>
- 
-  <body>
-    <!-- Setting up the box model  first box for Nav bar-->
-   
-  	 <section class=" containernav">
-        <div class="box1 ">
-     <ul class="nav justify-content-center">
-         
-         <nav class="navbar navbar-expand-lg navbar-dark "/>
-<a class = "navbar-brand" href="#">
+   <!--script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+   <script src="js/jquery.validate.js"></script-->
 
-	
-  <a class="navbar-brand mb-0 h1" href="{% url 'about' %}"> About</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
- 
-    <ul class="navbar-nav mr-auto">
+   <!-- Bootstrap CSS -->
+   <!link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous" -->
 
-       <li class="nav-item active">
-        <a  class="nav-link" navbar-brand = "mb-0 h1" href="{% url 'home' %}">Research Themes <span class="sr-only">(current)</span></a>
-      </li>
-       <li class="nav-item active">
-        <a class="nav-link" href="#">Publications</a>
-      </li>
-     
-      <li class="nav-item active dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          People
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Core Staff</a>
-           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Research Associates and Fellows</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Technical Support Staff</a>
+
+     <title>{% block title %}Hello, world!{% endblock %}</title>
+     <!-- Configuring CSS in django website -->
+
+
+
+     <!--link rel="stylesheet" type="text/css" href="style.css"-->
+
+     <style>
+       /* change the brand and text color */
+       /* change the brand and text color */
+
+       /* change the color of active or hovered links
+
+
+       .containerfooter {
+
+         left: 0;
+         bottom: 0;
+         width: 100%;
+
+
+         text-align: center;
+       }
+       */
+     </style>
+
+
+
+ </head>
+
+ <body>
+
+   <!-- New Nav bar Two-->
+
+
+   <nav class="navbar navbar-expand-sm navbar-dark bg-default navbar-custom">
+
+     <div class="container ">
+       <a class="navbar-brand" href="#"></a>
+       <ul class="navbar-nav m-auto">
+         <li class="nav-item">
+           <a class="nav-link" href="#">About</a>
+         </li>
+         <li class="nav-item dropdown">
+           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Research Themes </a>
+           <div class="dropdown-menu">
+             <a href="#" class="dropdown-item">Research Theme 1</a>
              <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Trainees </a>
+             <a href="#" class="dropdown-item">Research Theme 2</a>
              <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Alumni</a>
-        </div>
-      </li>
-       <li class="nav-item active dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Opportunities
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Short Courses</a>
+             <a href="#" class="dropdown-item">Research Theme 3 </a>
              <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{% url 'intbursary' %}">Postgraduate Bursaries</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Emerging Researcher Funding</a>
+             <a href="#" class="dropdown-item">Research Theme 4</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Publications</a>
+         </li>
+         <li class="nav-item dropdown">
+           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">People </a>
+           <div class="dropdown-menu">
+             <a href="#" class="dropdown-item">Core Staff</a>
              <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Job Openings </a>
-
-
-       </li>
-    <li class="nav-item active dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          News
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Events and Announcements </a>
+             <a href="#" class="dropdown-item">Postgraduate Bursaries</a>
              <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Newsletters</a>
+             <a href="#" class="dropdown-item">Emerging Researcher Funding</a>
+             <div class="dropdown-divider"></div>
+             <a href="#" class="dropdown-item">Job Openings</a>
+         </li>
 
-      
-        </li>
-      <li class="nav-item active">
-        <a class="nav-link disabled" href="#">Resources</a>
-              </ul>
-      </li>
-    </ul>
+         <li class="nav-item dropdown">
+           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Opportunities </a>
+           <div class="dropdown-menu">
+             <a href="#" class="dropdown-item">Short Courses</a>
+             <div class="dropdown-divider"></div>
+             <a href="#" class="dropdown-item">Postgraduate Bursaries</a>
+             <div class="dropdown-divider"></div>
+             <a href="#" class="dropdown-item">Emerging Researcher Funding</a>
+             <div class="dropdown-divider"></div>
+             <a href="#" class="dropdown-item">Job Openings</a>
+         </li>
+         <li class="nav-item dropdown">
+           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">News</a>
+           <div class="dropdown-menu">
+             <a href="#" class="dropdown-item">Events and Announcements</a>
+             <div class="dropdown-divider"></div>
+             <a href="#" class="dropdown-item">Newsletters</a>
+         </li>
 
-  </div>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Resources</a>
+         </li>
+     </div>
+     </li>
 
-</nav>
+     </ul>
+     </div>
+   </nav>
+   <!-- logo section -->
+   {% block content %}
 
- </div>
-
-
- <!-- <End of nav bar codet”> -->
-
-    </section>
- 
- 
-
-  	<div class="container">
-  		<br/>
-	{% block content %}
-        
-        
-        
-	{% endblock %}
-	</div>
-  
-  </br>
+   {% endblock content %}
+   <!-- moto section -->
+   <!-- red section -->
+   <!--yellow section -->
+   <!-- black nav link section -->
 
 
 
 
+   <section id="newsletter" class="text-center p-1 bg-dark text-white">
+     <div class="container">
+       <div class="row">
+         <div class="col">
+        <p> Subscribe <p>
+         </div>
+       </div>
+     </div>
+   </section>
 
-<footer class = "text-muted" text align = "center">
-      <div class = "container">
-        <p> Copyright © SACEMA {% now "Y" %} </p>
-      </div>
 
-    
+   <!-- Funder logo Section -->
+   <section id="funderlogos" class="py-3">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-3">
+         </div>
+         <div class="col-md-3 ml">
+           <img src="/static/images/DepartmentOfScienceAndTechnology.jpg" alt="" class="img-fluid">
+         </div>
+         <div class="col-md-3">
+           <img src="/static/images/NationalResearchFoundation.jpg" alt="" class="img-fluid">
+         </div>
+         <div class="col-md-3">
+           <img src="/static/images/StellenboschUniversity.jpg" alt="" class="img-fluid">
+         </div>
+       </div>
+     </div>
+   </section>
 
-    </footer>
-    
-</body>
-</html>
+
+
+
+
+
+   <footer id="main-footer" class="text-center p-1">
+     <div class="container">
+       <div class="row">
+         <div class="col">
+           <p><b>Copyright © SACEMA {% now "Y" %}</b></p>
+         </div>
+       </div>
+     </div>
+   </footer>
+
+
+
+
+   <!-- Bootstrap core JavaScript
+      ================================================== -->
+   <!-- Placed at the end of the document so the pages load faster -->
+   <script src="/static/bootstrap4/js/jquery.js"></script>
+   <script src="/static/bootstrap4/js/bootstrap.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+ </body>
+
+ </html>

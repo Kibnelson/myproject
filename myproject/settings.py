@@ -104,7 +104,7 @@ DATABASES = {
         'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': '5432',
-       
+
     }
 }
 
@@ -148,12 +148,14 @@ USE_TZ = False # changed to false from True so as to pick the current time zo
 
 
 STATIC_URL = '/static/'
-#STATIC_ROOT = os.path.join(BASE_DIR, "static") 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_DIRS = 'static'
+#STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = '/media/' #media root configuration
 MEDIA_ROOT = os.path.join(BASE_DIR,"media") #media root configuration
 
-STATIC_DIRS = 'static'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+
 
 
 CONTENT_TYPES = ['file']
@@ -166,7 +168,3 @@ CONTENT_TYPES = ['file']
 # 250MB - 214958080
 # 500MB - 429916160
 MAX_UPLOAD_SIZE = "5242880"
-
-
-
-
