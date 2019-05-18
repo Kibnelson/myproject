@@ -35,24 +35,8 @@
 
      <!--link rel="stylesheet" type="text/css" href="style.css"-->
 
-     <style>
-       /* change the brand and text color */
-       /* change the brand and text color */
+  
 
-       /* change the color of active or hovered links
-
-
-       .containerfooter {
-
-         left: 0;
-         bottom: 0;
-         width: 100%;
-
-
-         text-align: center;
-       }
-       */
-     </style>
 
 
 
@@ -141,42 +125,84 @@
      <div class="container">
        <div class="row">
          <div class="col">
-        <p> Subscribe <p>
+           <p> Subscribe <p>
          </div>
        </div>
      </div>
    </section>
 
 
-   <!-- Funder logo Section -->
+   <!-- Funder logo Section
+   ​<div class="container">
+     <h2>Aligning images</h2>
+     <p>Use the float classes to float the image to the left or to the right:</p>
+     <img src="/static/images/StellenboschUniversity.jpg" class="float-left"  class="img-fluid">
+      <img src="/static/images/NationalResearchFoundation.jpg" class="centre">
+     <img src="/static/images/DepartmentOfScienceAndTechnology.jpg" class="float-right"  class="img-fluid">
+   </div> -->
+
+   <!-- Funder PHOTO GALLERY -->
+
+
+   <section id="gallery" class="py-1">
+     <div class="container">
+
+       <p class="text-center">DST-NRF Centre of Excellence in Epidemiological Modelling and Analysis</p>
+       <div class="row mb-4">
+         <div class="col-md-4">
+
+
+             <img src="/static/images/StellenboschUniversity.jpg" alt="" class="img-fluid">
+           </a>
+         </div>
+
+         <div class="col-md-4">
+
+
+             <img src="/static/images/NationalResearchFoundation.jpg" alt="" class="img-fluid">
+           </a>
+         </div>
+
+         <div class="col-md-4">
+
+
+             <img src="/static/images/DepartmentOfScienceAndTechnology.jpg" alt="" class="img-fluid">
+           </a>
+         </div>
+       </div>
+
+
+     </div>
+   </section>
+
+
+<!--
+reduced size of images code silenced
    <section id="funderlogos" class="py-3">
      <div class="container">
        <div class="row">
          <div class="col-md-3">
          </div>
          <div class="col-md-3 ml">
-           <img src="/static/images/DepartmentOfScienceAndTechnology.jpg" alt="" class="img-fluid">
+           <img src="/static/images/StellenboschUniversity.jpg" alt="" class="img-fluid">
          </div>
          <div class="col-md-3">
            <img src="/static/images/NationalResearchFoundation.jpg" alt="" class="img-fluid">
          </div>
          <div class="col-md-3">
-           <img src="/static/images/StellenboschUniversity.jpg" alt="" class="img-fluid">
+           <img src="/static/images/DepartmentOfScienceAndTechnology.jpg" alt="" class="img-fluid">
+
          </div>
        </div>
      </div>
    </section>
-
-
-
-
-
+ -->
 
    <footer id="main-footer" class="text-center p-1">
      <div class="container">
        <div class="row">
          <div class="col">
-           <p><b>Copyright © SACEMA {% now "Y" %}</b></p>
+           <p>Copyright © SACEMA {% now "Y" %}</p>
          </div>
        </div>
      </div>
