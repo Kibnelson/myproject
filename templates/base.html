@@ -35,7 +35,7 @@
 
      <!--link rel="stylesheet" type="text/css" href="style.css"-->
 
-  
+
 
 
 
@@ -52,10 +52,10 @@
      <div class="container ">
        <a class="navbar-brand" href="#"></a>
        <ul class="navbar-nav m-auto">
-         <li class="nav-item">
+         <li class="nav-item active">
            <a class="nav-link" href="#">About</a>
          </li>
-         <li class="nav-item dropdown">
+         <li class="nav-item active dropdown">
            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Research Themes </a>
            <div class="dropdown-menu">
              <a href="#" class="dropdown-item">Research Theme 1</a>
@@ -66,10 +66,10 @@
              <div class="dropdown-divider"></div>
              <a href="#" class="dropdown-item">Research Theme 4</a>
          </li>
-         <li class="nav-item">
+         <li class="nav-item active">
            <a class="nav-link" href="#">Publications</a>
          </li>
-         <li class="nav-item dropdown">
+         <li class="nav-item active dropdown">
            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">People </a>
            <div class="dropdown-menu">
              <a href="#" class="dropdown-item">Core Staff</a>
@@ -81,7 +81,7 @@
              <a href="#" class="dropdown-item">Job Openings</a>
          </li>
 
-         <li class="nav-item dropdown">
+         <li class="nav-item active dropdown">
            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Opportunities </a>
            <div class="dropdown-menu">
              <a href="#" class="dropdown-item">Short Courses</a>
@@ -92,7 +92,7 @@
              <div class="dropdown-divider"></div>
              <a href="#" class="dropdown-item">Job Openings</a>
          </li>
-         <li class="nav-item dropdown">
+         <li class="nav-item active dropdown">
            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">News</a>
            <div class="dropdown-menu">
              <a href="#" class="dropdown-item">Events and Announcements</a>
@@ -100,7 +100,7 @@
              <a href="#" class="dropdown-item">Newsletters</a>
          </li>
 
-         <li class="nav-item">
+         <li class="nav-item active">
            <a class="nav-link" href="#">Resources</a>
          </li>
      </div>
@@ -113,33 +113,89 @@
    {% block content %}
 
    {% endblock content %}
-   <!-- moto section -->
-   <!-- red section -->
-   <!--yellow section -->
-   <!-- black nav link section -->
 
+   <!-- logo section -->
 
-
-
-   <section id="newsletter" class="text-center p-1 bg-dark text-white">
-     <div class="container">
+   <section id="logosection" class="py-8">
+     <div class="dark-overlay">
        <div class="row">
          <div class="col">
-           <p> Subscribe <p>
+           <div class="container pt-8">
+             <img src="/static/images/sacemanowording.png" class="mx-auto d-block">
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <!-- moto section -->
+
+   </div>
+   <section id="aim" class="p-8">
+     <div class="dark-overlay">
+       <div class="row">
+         <div class="col">
+           <div class="container pt-8">
+             <p class="text-center">SACEMA works towards improving health in Africa through modelling and analysis</p>
+
+
+           </div>
          </div>
        </div>
      </div>
    </section>
 
 
-   <!-- Funder logo Section
-   ​<div class="container">
-     <h2>Aligning images</h2>
-     <p>Use the float classes to float the image to the left or to the right:</p>
-     <img src="/static/images/StellenboschUniversity.jpg" class="float-left"  class="img-fluid">
-      <img src="/static/images/NationalResearchFoundation.jpg" class="centre">
-     <img src="/static/images/DepartmentOfScienceAndTechnology.jpg" class="float-right"  class="img-fluid">
-   </div> -->
+   <!-- red background section -->
+   <section id="redbackground" class="p-5">
+     <div class="dark-overlay">
+       <div class="row">
+         <div class="col">
+           <div class="container pt-5">
+
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+   <div>
+     
+   </div>
+
+   <!--orange/yellow background section -->
+   <section id="orangebackground" class="p-5">
+     <div class="dark-overlay">
+       <div class="row">
+         <div class="col">
+           <div class="container pt-5">
+
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <!-- black nav link section -->
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+     <ul class="navbar-nav">
+       <li class="nav-item active">
+         <a class="nav-link" href="#">Subscribe</a>
+       </li>
+       <li class="nav-item active">
+         <a class="nav-link" href="#">email</a>
+       </li>
+       <li class="nav-item active">
+         <a class="nav-link" href="#">twitter</a>
+       </li>
+       <li class="nav-item active">
+         <a class <li class="nav-item active">
+           <a class="nav-link" href="#">contact us</a>
+       </li>
+       <li class="nav-item active">
+         <a class="nav-link" href="#">legal</a>
+       </li>
+     </ul>
+   </nav>
 
    <!-- Funder PHOTO GALLERY -->
 
@@ -152,53 +208,30 @@
          <div class="col-md-4">
 
 
-             <img src="/static/images/StellenboschUniversity.jpg" alt="" class="img-fluid">
-           </a>
-         </div>
-
-         <div class="col-md-4">
-
-
-             <img src="/static/images/NationalResearchFoundation.jpg" alt="" class="img-fluid">
-           </a>
-         </div>
-
-         <div class="col-md-4">
-
-
-             <img src="/static/images/DepartmentOfScienceAndTechnology.jpg" alt="" class="img-fluid">
-           </a>
-         </div>
-       </div>
-
-
-     </div>
-   </section>
-
-
-<!--
-reduced size of images code silenced
-   <section id="funderlogos" class="py-3">
-     <div class="container">
-       <div class="row">
-         <div class="col-md-3">
-         </div>
-         <div class="col-md-3 ml">
            <img src="/static/images/StellenboschUniversity.jpg" alt="" class="img-fluid">
+           </a>
          </div>
-         <div class="col-md-3">
-           <img src="/static/images/NationalResearchFoundation.jpg" alt="" class="img-fluid">
-         </div>
-         <div class="col-md-3">
-           <img src="/static/images/DepartmentOfScienceAndTechnology.jpg" alt="" class="img-fluid">
 
+         <div class="col-md-4">
+
+
+           <img src="/static/images/NationalResearchFoundation.jpg" alt="" class="img-fluid">
+           </a>
+         </div>
+
+         <div class="col-md-4">
+
+
+           <img src="/static/images/DepartmentOfScienceAndTechnology.jpg" alt="" class="img-fluid">
+           </a>
          </div>
        </div>
+
+
      </div>
    </section>
- -->
 
-   <footer id="main-footer" class="text-center p-1">
+   <footer id="main-footer" class="text-center p+5">
      <div class="container">
        <div class="row">
          <div class="col">
