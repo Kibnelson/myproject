@@ -23,9 +23,6 @@ body {
 
 
 /* Dropdown menu background color*/
-
-
-
 #logosection {
 
   min-height: 50px;
@@ -43,8 +40,8 @@ body {
   position: relative;
   min-height: 300px;
   background-color: #e03127;
-  border-bottom-right-radius:60px 90px;
-  border-bottom-left-radius: 60px 90px;
+  border-bottom-right-radius:4em;
+  border-bottom-left-radius: 4em;
 
 }
 
@@ -56,8 +53,9 @@ body {
   background-repeat: no-repeat;
   text-align: center;
   color: #fff;
-  border-top-right-radius:60px 90px;
-  border-top-left-radius: 60px 90px;
+  border-top-right-radius:4em;
+  border-top-left-radius: 4em;
+
 
 }
 
