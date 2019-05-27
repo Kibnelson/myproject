@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'archivesuploads.apps.ArchivesuploadsConfig', # format for renaming django apps
     'News',
+
    #'contactus',
    'djgeojson', # application for maps in django on django admin # pip3 install "django-geojson [field]"
    'leaflet', # application for maps in django on django admin
@@ -89,6 +90,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
