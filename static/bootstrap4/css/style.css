@@ -11,7 +11,7 @@ body, html {
   /*max-width: 100%;
   max-height: 100%;*/
   margin-right: 0px;
-  margin-right: 0px;
+  margin-right: -75px;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -24,24 +24,25 @@ body, html {
 .navbar-custom {
   background-color: #f7941e;
   font-size: 1rem;
+    
 }
 
 
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-    color:red;
+    color:#731305;
 }
 
 /* change the link color */
 .navbar-custom .navbar-nav .nav-link {
-    color: r;
+    color: #white;
 }
 
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: white;
+    color: #731305;
 }
 
 /* for dropdown only - change the color of droodown */
