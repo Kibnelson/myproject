@@ -1,8 +1,87 @@
 {% extends 'base.html' %}
-{%block title%} Home {% endblock %}
+
+{% block title %} Home {% endblock %}
+
 {% block content %}
 
+<section id="back_ground">
+  <div class="container">
 
-  <p> Welcome to the home page, construction in progress, please be patient !!!!! </p>
+    <div class="card-columns text-center">
+      <div class="card text-white border-white">
+        <img class="card-img" src="\static\images\building_relations.jpg" alt="Card image top" width="300" height="338">
+        <div class="card-img-overlay">
 
-   {% endblock %}
+          <p class="card-text">Building great collaborations</p>
+          <a href="#" class="card-link btn btn-danger" class="card-footer">Find out more</a>
+        </div>
+      </div>
+      <div class="card text-white border-white">
+        <img class="card-img" src="\static\images\commissioned_work.jpg" alt="Card image top" width="300" height="338">
+        <div class="card-img-overlay">
+
+          <p class="card-text">Undertaking commissioned work</p>
+          <a href="#" class="card-link btn btn-danger" class="card-footer">Work with us</a>
+        </div>
+      </div>
+      <div class="card text-white border-white">
+        <img class="card-img" src="\static\images\research_training.jpg" alt="Card image top" width="300" height="338">
+        <div class="card-img-overlay">
+
+          <p class="card-text">Research and Training</p>
+
+          <a href="#" class="card-link btn btn-warning text-light" class="card-footer">Explore options</a>
+        </div>
+
+      </div>
+    </div>
+    <div>
+
+      <div class="card-columns">
+        <div class="card text-center border-white">
+
+          <div class="card-body">
+            <h4 class="card-title text-danger">News</h4>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content
+              is a little bit longer.</p>
+          </div>
+          <footer>
+            <a href="#" class="card-link btn btn-warning text-light" class="card-footer">View all articles</a>
+          </footer>
+        </div>
+
+        <div class="card text-center border-white">
+
+          <div class="card-body">
+            <h4 class="card-title text-danger">Events</h4>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content
+              is a little bit longer.</p>
+          </div>
+          <footer>
+            <a href="#" class="card-link btn btn-danger text-light" class="card-footer"> View calendar</a>
+          </footer>
+        </div>
+        <div class="card text-center border-white">
+
+          <div class="card-body">
+            <h4 class="card-title text-danger">Opportunities</h4>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content
+              is a little bit longer.</p>
+          </div>
+          <footer>
+            <a href="#" class="card-link btn btn-danger text-light" class="card-footer">View all opportunities</a>
+          </footer>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+</section>
+
+{% endblock %}

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'archivesuploads.apps.ArchivesuploadsConfig', # format for renaming django apps
     'News',
+     'django.contrib.humanize',
 
    #'contactus',
    'djgeojson', # application for maps in django on django admin # pip3 install "django-geojson [field]"
