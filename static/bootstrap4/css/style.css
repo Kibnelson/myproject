@@ -114,6 +114,30 @@ body, html {
 
 .p {}
 
+  /* Button Colors*/
+  .btn-primary {
+
+    background-color: #99241B !important;
+
+    border: 1px solid #99241B !important;
+
+  }
+
+  .btn-danger {
+
+    background-color: #E03127 !important;
+    border: 1px solid #E03127 !important;
+
+  }
+
+  .btn-warning {
+
+    background-color: #F7941E !important;
+    border: 1px solid #F7941E !important;
+
+  }
+
+
   #lower_navbar {
 
   }
