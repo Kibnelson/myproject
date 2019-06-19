@@ -117,19 +117,19 @@ body, html {
   /* Button Colors on home page*/
   .btn-primary {
     background-color: #99241B !important; /* dark maroon color*/
-    border: 1px solid #99241B;
+    border: 1px solid #99241B !important;
 
   }
 
   .btn-danger {
     background-color: #E03127 !important; /* redish color */
-    border: 1px solid #E03127;
+    border: 1px solid #E03127 !important;
 
   }
 
   .btn-warning {
     background-color: #F7941E !important; /* orangish color */
-    border: 1px solid #F7941E;
+    border: 1px solid #F7941E !important;
 
   }
 
