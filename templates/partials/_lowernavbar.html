@@ -72,81 +72,18 @@
       <li class="nav-item active">
         <a href="mailto:sacema@sun.ac.za?Subject=Hello%20again" class="btn btn-dark" role="button" aria-pressed="true">Email</a>
       </li>
-      <!-- twitter modal -->
+      <!-- twitter page -->
       <li class="nav-item active">
 
         <a href="https://twitter.com/hashtag/sacema" class="btn btn-dark" role="button" aria-pressed="true">Twitter</a>
       </li>
       <!-- facebook -->
-    
       <!-- Contact us modal -->
       <li class="nav-item active">
 
-        <button type="button" class="btn btn-dark" data-toggle="modal" data-target=".bd-contactus-modal-xl">Contact us</button>
-
-        <div class="modal fade bd-contactus-modal-xl" tabindex="-1" role="dialog" aria-labelledby="contactusLargeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="contactusModalCenterTitle">Get in Touch</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="col-md-12">
-                  <div class="card p-4">
-                    <div class="card-body">
-                      <h3 class="text-center">Get in touch with us</h3>
-                      <hr>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <input type="text" class="form-control" placeholder="First Name">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Last Name">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Phone Number">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <textarea class="form-control" placeholder="Message"></textarea>
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <input type="submit" value="Submit" class="btn btn-outline-danger btn-block">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
+        <a href="{% url 'contactus' %}" class="btn btn-dark" role="button" aria-pressed="true">Contact us</a>
       </li>
       <!-- legal modal -->
-
-
-
 
     </ul>
   </nav>
