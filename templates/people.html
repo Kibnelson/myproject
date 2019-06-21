@@ -3,34 +3,34 @@
 {% block title %} People {% endblock %}
 
 {% block content %}
-<div class="card-columns">
-  <div class="card">
-    <img class="card-img-top img-fluid" src="" alt="" width="174" height="261">
-    <div class="card-body">
-      <h4 class="card-title">Card title that wraps to a new line</h4>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content
-        is a little bit longer.</p>
-    </div>
 
-  </div>
 
-  <div class="card">
-    <img class="card-img-top img-fluid" src="" alt="">
-    <div class="card-body">
-      <h4 class="card-title">Card title that wraps to a new line</h4>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content
-        is a little bit longer.</p>
+<!-- Team -->
+  <section id="team" class="py-5">
+    <div class="container">
+      <h2 class="text-center">People</h2>
+      <div class="row text-center">
+        {% if peoplemanager %}
+          {% for peoplemanager in peoplemanagers %}
+            <div class="col-md-4">
+              <img src="{{ peoplemanager.headshot.url }}" alt="" class="rounded-circle mb-3">
+              <h4>{{ peoplemanager.name }}</h4>
+              <p class="text-success">
+                <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+              <hr>
+              <p>
+                <i class="fas fa-phone"></i> {{ peoplemanager.phone }}</p>
+              <p>
+                <i class="fas fa-envelope-open"></i> {{ peoplemanager.email }}</p>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="col-md-12">
+              <p>No People Available</p>
+          </div>
+        {% endif %}
+      </div>
     </div>
-  </div>
-
-  <div class="card">
-    <img class="card-img-top img-fluid" src="" alt="">
-    <div class="card-body">
-      <h4 class="card-title">Card title that wraps to a new line</h4>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content
-        is a little bit longer.</p>
-    </div>
-  </div>
-</div>
+  </section>
 
 {% endblock %}
