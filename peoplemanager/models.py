@@ -34,18 +34,37 @@ class StaffDetail(models.Model):
 	#category = models.CharField(max_length=200)
 	CS = 'Core Staff'
 	RAF = 'Research Associates And Fellows'
-	TSS = 'Technical Support Staff'
-	T = 'Trainees'
-	A = 'Alumni'
+	PDRF = 'Postdoctoral Research Fellow'
+	S = 'Students'
+
 	STAFF_CATEGORY_CHOICES = (
 		('CS','Core Staff'),
 		('RAF','Research Associates And Fellows'),
-		('TSS','Technical Support Staff'),
-		('T','Trainees'),
-		('A','Alumni'),
+		('PDRF','Postdoctoral Research Fellow'),
+		('S','Students'),
+
 		)
 	category = models.CharField(max_length = 200, choices = STAFF_CATEGORY_CHOICES)
 	#category2 = models.ForeignKey(StaffCategories, on_delete=models.CASCADE,related_name=staffcategories2,null=True,blank=True)
+	BCom = 'BCom'
+	BTech = 'BTech'
+	BSc = 'BSc'
+	Hons = 'Hons'
+	MTech = 'MTech'
+	MBA = 'MBA'
+	MSc = 'MSc'
+	PhD = 'PhD'
+	DEGREE_CHOICES = (
+		('BCom','BCom'),
+		('BTech','BTech'),
+		('BSc','BSc'),
+		('Hons','Hons'),
+		('MTech','MTech'),
+		('MBA','MBA'),
+		('MSc','MSc'),
+		('PhD','PhD'),
+		)
+	qualification = models.CharField(max_length = 8, null=True, blank=True, choices = DEGREE_CHOICES)
 	job_title = models.CharField(max_length=500)
 	job_description =models.TextField(max_length=20000,null=True, blank=True)
 	appointment_date =models.DateField(max_length=200)

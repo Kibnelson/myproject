@@ -52,7 +52,7 @@ class StudentDetailAdmin(admin.ModelAdmin): # the below code willl customise the
 
 
 class StaffDetailAdmin(admin.ModelAdmin):
-	list_display=('id','category','job_title','job_description','appointment_date','termination_date','is_active','person_id')
+	list_display=('id','category','qualification','job_title','job_description','appointment_date','termination_date','is_active','person_id')
 	list_filter= ['category']
 	ordering = ['id']
 	list_per_page =25

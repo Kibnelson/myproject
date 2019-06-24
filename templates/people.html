@@ -1,27 +1,30 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %} People {% endblock %}
 
 {% block content %}
 
-
 <!-- Team -->
-  <section id="team" class="py-5">
+
+  <section id="team" class="py-8">
     <div class="container">
+
       <h2 class="text-center">People</h2>
       <div class="row text-center">
-        {% if peoplemanager %}
-          {% for peoplemanager in peoplemanagers %}
-            <div class="col-md-4">
-              <img src="{{ peoplemanager.headshot.url }}" alt="" class="rounded-circle mb-3">
-              <h4>{{ peoplemanager.name }}</h4>
-              <p class="text-success">
-                <i class="fas fa-award text-success mb-3"></i> Realtor</p>
+        {% if peopledetails %}
+          {% for peopledetail in peopledetails %}
+            <div class="col-md-3">
+              <img src="{{ peopledetail.headshot.url }}" alt="Card image" class="rounded-lg mb-3">
               <hr>
-              <p>
-                <i class="fas fa-phone"></i> {{ peoplemanager.phone }}</p>
-              <p>
-                <i class="fas fa-envelope-open"></i> {{ peoplemanager.email }}</p>
+               <div class="card-img-top">
+
+
+                    <p> <i class="fas fa-phone"></i> {{ peopledetail.firstnames }}
+
+              <i class="fas fa-envelope-open"></i> {{ peopledetail.surname }},</p>
+
+            </div>
             </div>
           {% endfor %}
         {% else %}
@@ -32,5 +35,4 @@
       </div>
     </div>
   </section>
-
 {% endblock %}
