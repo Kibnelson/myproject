@@ -10,19 +10,19 @@
   <section id="team" class="py-8">
     <div class="container">
 
-      <h2 class="text-center">People</h2>
+      <h5 class="text-center">People</h5>
       <div class="row text-center">
         {% if peopledetails %}
           {% for peopledetail in peopledetails %}
             <div class="col-md-3">
               <img src="{{ peopledetail.headshot.url }}" alt="Card image" class="rounded-lg mb-3">
-              <hr>
+
                <div class="card-img-top">
 
 
                     <p> <i class="fas fa-phone"></i> {{ peopledetail.firstnames }}
 
-              <i class="fas fa-envelope-open"></i> {{ peopledetail.surname }},</p>
+              <i class="fas fa-envelope-open"></i> {{ peopledetail.surname }}</p>
 
             </div>
             </div>
