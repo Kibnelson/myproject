@@ -6,33 +6,32 @@
 {% block content %}
 
 <!-- Team -->
+<section id="people" class="py-8">
+   <div class="container">
 
-  <section id="people" class="py-8">
-    <div class="container">
+     <h5 class="text-center">People</h5>
+     <div class="row text-center">
+       {% if peopledetails %}
+         {% for peopledetail in peopledetails %}
+           <div class="col-md-3">
+             <img src="{{ peopledetail.headshot.url }}" alt="Card image" class="rounded" style="width: 174px" style="height: 261px">
 
-      <h5 class="text-center">People</h5>
-      <div class="row text-center">
-        {% if peopledetails %}
-          {% for peopledetail in peopledetails %}
-            <div class="col-md-3">
-              <img src="{{ peopledetail.headshot.url }}" alt="Card image" class="rounded mr-3">
-
-               <div class="card-img-top">
+              <div class="card-img-top">
 
 
-                    <p> <i class="fas fa-phone"></i> {{ peopledetail.firstnames }}
+                   <p> <i class="fas fa-phone"></i> {{ peopledetail.firstnames }}
 
-              <i class="fas fa-envelope-open"></i> {{ peopledetail.surname }}</p>
+             <i class="fas fa-envelope-open"></i> {{ peopledetail.surname }}</p>
 
-            </div>
-            </div>
-          {% endfor %}
-        {% else %}
-          <div class="col-md-12">
-              <p>No People Available</p>
-          </div>
-        {% endif %}
-      </div>
-    </div>
-  </section>
-{% endblock %}
+           </div>
+           </div>
+         {% endfor %}
+       {% else %}
+         <div class="col-md-12">
+             <p>No People Available</p>
+         </div>
+       {% endif %}
+     </div>
+   </div>
+ </section>
+ {% endblock %}
