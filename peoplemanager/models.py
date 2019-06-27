@@ -36,12 +36,14 @@ class StaffDetail(models.Model):
 	RAF = 'Research Associates And Fellows'
 	PDRF = 'Postdoctoral Research Fellow'
 	S = 'Students'
+	SC='Steering Committee'
 
 	STAFF_CATEGORY_CHOICES = (
 		('CS','Core Staff'),
 		('RAF','Research Associates And Fellows'),
 		('PDRF','Postdoctoral Research Fellow'),
 		('S','Students'),
+		('SC','Steering Committee'),
 
 		)
 	category = models.CharField(max_length = 200, choices = STAFF_CATEGORY_CHOICES)

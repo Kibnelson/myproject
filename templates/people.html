@@ -5,32 +5,41 @@
 
 {% block content %}
 
-<!-- Team -->
+<!-- People test -->
 <section id="people" class="py-8">
-   <div class="container">
+  <div class="container">
 
-     <h5 class="text-center">Core Staff</h5>
-     <div class="row text-center">
-       {% if peopledetails %}
-         {% for peopledetail in peopledetails %}
-           <div class="col-md-3">
-             <img src="{{ peopledetail.headshot.url }}" alt="Card image" class="rounded" style="width: 174px" style="height: 261px">
+    <h5 class="text-center">Core Staff</h5>
+    <div class="row text-center text-dark">
+      {% if peopledetails %}
+      {% for peopledetail in peopledetails %}
+
+      <div class="col-md-4">
+
+        <img class="card-img" src="{{ peopledetail.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
+        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end" class="bg-secondary">
+
+            <div class="card-title bg-secondary">
+              <p> {{ peopledetail.firstnames }} {{ peopledetail.surname }}</p>
+              <p class="card-text">Some quick example text.</p>
+            </div>
+
+        </div>
+
+      </div>
+      <hr>
 
 
+      {% endfor %}
+      {% else %}
+      <div class="col-md-12">
+        <p>No People Available</p>
+      </div>
+      {% endif %}
 
-                   <p> <i class="fas fa-phone"></i> {{ peopledetail.firstnames }}
+    </div>
 
-             <i class="fas fa-envelope-open"></i> {{ peopledetail.surname }}</p>
-<hr>
-
-           </div>
-         {% endfor %}
-       {% else %}
-         <div class="col-md-12">
-             <p>No People Available</p>
-         </div>
-       {% endif %}
-     </div>
-   </div>
- </section>
- {% endblock %}
+  </div>
+</section>
+{% endblock %}
+<!-- People-->

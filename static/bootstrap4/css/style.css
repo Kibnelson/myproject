@@ -139,7 +139,10 @@ li:hover ul { /* when list items are hovered over, do this to lists contained wi
 
   }
 
+  #personbgcolor {
+  background-color: orange;
 
+  }
 
 
   #lower_navbar {
