@@ -1,4 +1,5 @@
 from django.db import models
+from multiselectfield import MultiSelectField
 
 # Create your models here.
 from django.conf import settings
@@ -46,7 +47,7 @@ class StaffDetail(models.Model):
 		('SC','Steering Committee'),
 
 		)
-	category = models.CharField(max_length = 200, choices = STAFF_CATEGORY_CHOICES)
+	category = MultiSelectField(choices = STAFF_CATEGORY_CHOICES)
 	#category2 = models.ForeignKey(StaffCategories, on_delete=models.CASCADE,related_name=staffcategories2,null=True,blank=True)
 	BCom = 'BCom'
 	BTech = 'BTech'
