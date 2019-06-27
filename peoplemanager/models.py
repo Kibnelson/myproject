@@ -69,6 +69,7 @@ class StaffDetail(models.Model):
 	qualification = models.CharField(max_length = 8, null=True, blank=True, choices = DEGREE_CHOICES)
 	job_title = models.CharField(max_length=500)
 	job_description =models.TextField(max_length=20000,null=True, blank=True)
+	research_theme =models.TextField(max_length=200000,null=True, blank=True)
 	appointment_date =models.DateField(max_length=200)
 	termination_date =models.DateField(max_length=200,null=True,blank=True)
 	is_active =models.BooleanField(default=True)
