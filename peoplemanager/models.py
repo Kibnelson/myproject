@@ -36,14 +36,12 @@ class StaffDetail(models.Model):
 	CS = 'Core Staff'
 	RAF = 'Research Associates And Fellows'
 	PDRF = 'Postdoctoral Research Fellow'
-	S = 'Students'
 	SC='Steering Committee'
 
 	STAFF_CATEGORY_CHOICES = (
 		('CS','Core Staff'),
 		('RAF','Research Associates And Fellows'),
 		('PDRF','Postdoctoral Research Fellow'),
-		('S','Students'),
 		('SC','Steering Committee'),
 
 		)
