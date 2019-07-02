@@ -7,4 +7,8 @@ urlpatterns = [
 
    path('people/',views.people, name ='people') ,
    path('person/',views.person, name ='person') ,
+   path('corestaff/',views.corestaff, name ='corestaff') ,
+   path('postdcrfellows/',views.postdcrfellows, name ='postdcrfellows') ,
+   path('researchafellows/',views.researchafellows, name ='researchafellows') ,
+   path('students/',views.students, name ='students') ,
    ]

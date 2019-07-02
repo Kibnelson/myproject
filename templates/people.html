@@ -5,41 +5,25 @@
 
 {% block content %}
 
-<!-- People test -->
-<section id="people" class="py-8">
-  <div class="container">
+<!-- People categories -->
 
-    <h5 class="text-center">Core Staff</h5>
-    <div class="row text-center text-light">
-      {% if peopledetails %}
-      {% for peopledetail in peopledetails %}
+<div class="card text-center border-white">
 
-      <div class="col-md-4">
+  <div class="card-body">
+    <h5 class="card-title">People at SACEMA</h5>
+    <hr>
+    <div class="row text-center">
 
-        <img class="card-img" src="{{ peopledetail.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
-        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end" class="bg-secondary">
-
-            <div class="card-title bg-secondary">
-              <p> {{ peopledetail.firstnames }} {{ peopledetail.surname }}</p>
-              <p class="card-text">Some quick example text.</p>
-            </div>
-
-        </div>
-
-      </div>
-      <hr>
-
-
-      {% endfor %}
-      {% else %}
       <div class="col-md-12">
-        <p>No People Available</p>
+<p class="card-text"><a href="{% url 'corestaff' %}">Core Staff</a></p>
+<p class="card-text"><a href="{% url 'researchafellows' %}">Research Associates and Fellows</a></p>
+<p class="card-text"><a href="{% url 'postdcrfellows' %}">Postdoctoral Research Fellows</a></p>
+<p class="card-text"><a href="{% url 'students' %}">Students</a></p>
       </div>
-      {% endif %}
 
     </div>
-
   </div>
-</section>
+
+</div>
 {% endblock %}
 <!-- People-->

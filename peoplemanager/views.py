@@ -11,18 +11,30 @@ from django.utils import timezone # to display date and time as per timezone
 
 
 # Create your views here.
-
-
-def people(request):
-
+def corestaff(request):
     peopledetails = PeopleDetail.objects.order_by('id')
-
-
-    return render(request, "people.html", {'peopledetails': peopledetails})
+    return render(request, "corestaff.html", {'peopledetails': peopledetails})
 
 
 def person(request):
    return render(request, "person.html", {})
+
+
+def people(request):
+   return render(request, "people.html", {})
+
+
+def postdcrfellows(request):
+   return render(request, "postdcrfellows.html", {})
+
+
+def researchafellows(request):
+   return render(request, "researchafellows.html", {})
+   
+
+def students(request):
+   return render(request, "students.html", {})
+
 
 def home(request):
    return render(request, "home.html", {})

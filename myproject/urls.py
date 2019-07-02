@@ -26,7 +26,7 @@ from django.views.static import serve
 def protected_serve(request, path, document_root=None, show_indexes=False):
     return serve(request, path, document_root, show_indexes)
 """
-admin.site.site_header = 'SACEMA Administration Panel'
+admin.site.site_header = 'SACEMA Administration Dashboard'
 admin.site.site_title = 'SACEMA Administration'
 urlpatterns = [
     path('admin/', admin.site.urls),

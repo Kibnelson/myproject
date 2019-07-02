@@ -11,7 +11,7 @@ def contactus(request):
 
 
 def home(request):
-	    #intbursaryapps = Intbursary.objects
+	    
    return render(request, "home.html", {})
 
    return redirect('home')
