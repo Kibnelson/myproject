@@ -30,11 +30,13 @@ def postdcrfellows(request):
 
 def researchafellows(request):
    return render(request, "researchafellows.html", {})
-   
+
 
 def students(request):
    return render(request, "students.html", {})
 
+def steering_committee(request):
+   return render(request, "steering_committee.html", {})
 
 def home(request):
    return render(request, "home.html", {})

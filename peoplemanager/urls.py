@@ -11,4 +11,5 @@ urlpatterns = [
    path('postdcrfellows/',views.postdcrfellows, name ='postdcrfellows') ,
    path('researchafellows/',views.researchafellows, name ='researchafellows') ,
    path('students/',views.students, name ='students') ,
+   path('steering_committee/',views.steering_committee, name ='steering_committee') ,
    ]

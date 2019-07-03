@@ -67,11 +67,11 @@ def intbursary(request):
 
 def hello(request):
   return render(request, "hello.html", {})
+
 def about(request):
-	    #intbursaryapps = Intbursary.objects
    return render(request, "about.html", {})
+
 def home(request):
-	    #intbursaryapps = Intbursary.objects
    return render(request, "home.html", {})
 
 def saved(request):
