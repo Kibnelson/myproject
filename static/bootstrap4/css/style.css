@@ -38,9 +38,7 @@ body, html {
 
 
 
-li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
-    display: block; /* show 'em */
-  }
+
 
 
 

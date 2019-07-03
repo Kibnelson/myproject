@@ -14,15 +14,18 @@
       {% if peopledetails %}
       {% for peopledetail in peopledetails %}
 
-      <div class="col-md-4">
+      <div class="col-md-4 mb-4">
 
         <img class="card-img" src="{{ peopledetail.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
-        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end" class="bg-secondary">
+        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
 
-            <div class="card-title bg-secondary">
-              <p> {{ peopledetail.firstnames }} {{ peopledetail.surname }}</p>
+
+          <div class="content">
+            <p> {{ peopledetail.firstnames }} {{ peopledetail.surname }}</p>
               <p class="card-text">Some quick example text.</p>
-            </div>
+           </div>
+
+
 
         </div>
 
