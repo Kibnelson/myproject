@@ -3,23 +3,37 @@
 {% block content %}
 
 <!--Display Students -->
+<section id="students" class="py-8">
+  <div class="container">
 
-<div class="card text-center border-white text-dark">
+    <h5 class="text-center"> Students</h5>
+    <div class="row text-center text-light">
+      {% if studentdetails %}
+      {% for studentdetail in studentdetails %}
 
-  <div class="card-body">
-    <h5 class="card-title">Students</h5>
-    <hr>
-    <div class="row text-center">
+      <div class="col-md-4 mb-4">
 
-      <div class="col-md-12">
+        <img class="card-img" src="{{ studentdetail.person_id.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
+        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
 
 
+          <p> {{studentdetail.person_id.firstnames}} {{studentdetail.person_id.surname}}, {{ studentdetail.degree}}</p>
+          <p class="card-text">Supervisors: {{studentdetail.supervisor}}</p>
+           <p class="card-text">{{studentdetail.supervisor_additional}}</p>
+        </div>
 
       </div>
+      <hr>
+      {% endfor %}
+      {% else %}
+      <div class="col-md-12">
+        <p>No Students Available</p>
+      </div>
+      {% endif %}
 
     </div>
-  </div>
 
-</div>
+  </div>
+</section>
 
 {% endblock %}

@@ -42,7 +42,8 @@ def researchafellows(request):
 
 
 def students(request):
-   return render(request, "students.html", {})
+    studentdetails = StudentDetail.objects.order_by('id')
+    return render(request, "students.html", {'studentdetails': studentdetails})
 
 def steering_committee(request):
    return render(request, "steering_committee.html", {})
