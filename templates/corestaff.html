@@ -5,28 +5,22 @@
 
 
 <!--Display core Staff -->
-<!-- People test -->
 <section id="people" class="py-8">
   <div class="container">
 
-    <h5 class="text-center"> Core Staff</h5>
+    <h5 class="text-center"> Core staff</h5>
     <div class="row text-center text-light">
-      {% if peopledetails %}
-      {% for peopledetail in peopledetails %}
+      {% if staffdetails %}
+      {% for staffdetail in staffdetails %}
 
       <div class="col-md-4 mb-4">
 
-        <img class="card-img" src="{{ peopledetail.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
+        <img class="card-img" src="{{ staffdetail.person_id.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
         <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
 
 
-          <div class="content">
-            <p> {{ peopledetail.firstnames }} {{ peopledetail.surname }}</p>
-              <p class="card-text">Some quick example text.</p>
-           </div>
-
-
-
+          <p> {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}, {{ staffdetail.qualification}}</p>
+          <p class="card-text">{{staffdetail.research_theme}}</p>
         </div>
 
       </div>
@@ -42,5 +36,4 @@
 
   </div>
 </section>
-
 {% endblock %}

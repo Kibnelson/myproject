@@ -10,13 +10,15 @@ from django.utils.safestring import mark_safe
 class StaffDetailStackedInline(admin.StackedInline): #Tabular inline function and model
 	model = StaffDetail
 	fields= ('id','category','qualification','job_title','job_description','research_theme','appointment_date','termination_date','is_active', 'person_id') # Fields displayed
+	
 	extra = 1 # this will display only one inline form for one record in the django admin
 	max_num = 1 # this will display a maximum of only one inline forms for two records in the django admin
+
 
 class StudentDetailStackedInline(admin.StackedInline): # Tabular inline function and model for student details
 	model = StudentDetail
 	fields = ('supervisor','supervisor_additional','institution','department','thesis_title','degree','currently_registered','start_date','graduation_date','abstract','archivesupload_id','person_id')
-	list_filter =('degree')
+	list_filter =['degree']
 	ordering = ['id']
 	extra = 1
 	max_num = 2	# this will display a maximum of only two inline forms for two records in the django admin in the event a student registers for two degrees
@@ -43,7 +45,7 @@ class PeopleDetailAdmin(admin.ModelAdmin): # the below code willl customise the 
 
 
 class StudentDetailAdmin(admin.ModelAdmin): # the below code willl customise the admin panel (Searching, Filters and display of column headings)
-	list_display = ('id','supervisor','supervisor_additional','institution','department','thesis_title','degree','currently_registered','start_date','graduation_date','abstract','archivesupload_id','person_id')
+	list_display = ('id','person_id','supervisor','supervisor_additional','institution','department','thesis_title','degree','currently_registered','start_date','graduation_date','abstract','archivesupload_id')
 	list_filter =['degree','currently_registered','graduation_date']
 	ordering = ['id']
 	list_per_page =25
@@ -52,8 +54,8 @@ class StudentDetailAdmin(admin.ModelAdmin): # the below code willl customise the
 
 
 class StaffDetailAdmin(admin.ModelAdmin):
-	list_display=('id','category','qualification','job_title','job_description','appointment_date','termination_date','is_active','person_id')
-	list_filter= ['category']
+	list_display=('id','category','person_id','qualification','job_title','research_theme','job_description','appointment_date','termination_date','is_active')
+	list_filter = ['category']
 	ordering = ['id']
 	list_per_page =25
 

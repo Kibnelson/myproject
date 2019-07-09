@@ -1,6 +1,7 @@
 from django.db import models
 from multiselectfield import MultiSelectField
 
+
 # Create your models here.
 from django.conf import settings
 from django.utils.safestring import mark_safe
@@ -14,6 +15,7 @@ class PeopleDetail(models.Model):
 	bio = models.TextField(max_length=20000,null=True,blank=True)
 	email = models.EmailField(max_length=200,null = True,blank=True)
 	website = models.URLField(max_length=200,null=True, blank=True)
+	#staffdetail = models.ForeignKey(StaffDetail)
 
 	headshot = models.ImageField(upload_to='personimage',default='personimage/default.png')
 

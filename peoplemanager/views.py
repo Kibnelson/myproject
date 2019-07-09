@@ -12,8 +12,17 @@ from django.utils import timezone # to display date and time as per timezone
 
 # Create your views here.
 def corestaff(request):
-    peopledetails = PeopleDetail.objects.order_by('id')
-    return render(request, "corestaff.html", {'peopledetails': peopledetails})
+    #peopledetails = PeopleDetail.objects.filter(id=4).select_related() #shows on person online
+    staffdetails = StaffDetail.objects.order_by('id')#code will list all records without joins
+  
+    # Assumes you have a row with a primary key of 1
+    #staffdetail = StaffDetail.objects.get(pk=1)
+ 
+# get the email of the reporter for the article
+    #peopledetails = staffdetail.PeopleDetail.firstnames
+     
+
+    return render(request, "corestaff.html", {'staffdetails': staffdetails})
 
 
 def person(request):
