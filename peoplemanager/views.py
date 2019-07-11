@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
+from django.db.models import Q
 
 from .models import StaffDetail, PeopleDetail, StudentDetail
+
 
 from django.contrib import messages
 from django.http import HttpResponseRedirect
@@ -13,7 +15,7 @@ from django.utils import timezone # to display date and time as per timezone
 # Create your views here.
 def corestaff(request):
     #peopledetails = PeopleDetail.objects.filter(id=4).select_related() #shows on person online
-    staffdetails = StaffDetail.objects.order_by('id')#code will list all records without joins
+    staffdetails = StaffDetail.objects.order_by('id').filter(category__iexact='CS')#code will list all records without joins
   
     # Assumes you have a row with a primary key of 1
     #staffdetail = StaffDetail.objects.get(pk=1)
@@ -34,11 +36,14 @@ def people(request):
 
 
 def postdcrfellows(request):
-   return render(request, "postdcrfellows.html", {})
+    staffdetails = StaffDetail.objects.filter(category__iexact='PDRF')# this selection is hard wired on the model category options as in the table!
+    
+    return render(request, "postdcrfellows.html", {'staffdetails': staffdetails})
 
 
 def researchafellows(request):
-   return render(request, "researchafellows.html", {})
+    staffdetails = StaffDetail.objects.filter(category__iexact='RAF')# this selection is hard wired on the model category options as in the table!
+    return render(request, "researchafellows.html", {'staffdetails': staffdetails})
 
 
 def students(request):

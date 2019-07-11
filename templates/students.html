@@ -7,6 +7,8 @@
   <div class="container">
 
     <h5 class="text-center"> Students</h5>
+      <hr>
+
     <div class="row text-center text-light">
       {% if studentdetails %}
       {% for studentdetail in studentdetails %}
@@ -17,13 +19,13 @@
         <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
 
 
-          <p> {{studentdetail.person_id.firstnames}} {{studentdetail.person_id.surname}}, {{ studentdetail.degree}}</p>
+          <p> {{studentdetail.person_id.firstnames}} {{studentdetail.person_id.surname}}</p>
           <p class="card-text">Supervisors: {{studentdetail.supervisor}}</p>
            <p class="card-text">{{studentdetail.supervisor_additional}}</p>
         </div>
 
       </div>
-      <hr>
+    
       {% endfor %}
       {% else %}
       <div class="col-md-12">

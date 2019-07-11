@@ -5,23 +5,36 @@
 
 
 <!--Display Postdoctoral Research Fellows -->
+<section id="postdocrfellow" class="py-8">
+  <div class="container">
 
-<div class="card text-center border-white text-dark">
+    <h5 class="text-center">Postdoctoral Research Fellows</h5>
+      <hr>
+    <div class="row text-center text-light">
+      {% if staffdetails %}
+      {% for staffdetail in staffdetails %}
 
-  <div class="card-body">
-    <h5 class="card-title">Postdoctoral Research Fellows</h5>
-    <hr>
-    <div class="row text-center">
+      <div class="col-md-4 mb-4">
 
-      <div class="col-md-12">
+        <img class="card-img" src="{{ staffdetail.person_id.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
+        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
 
 
+          <p> {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}</p>
+          <p class="card-text">{{staffdetail.category}}</p>
+        </div>
 
       </div>
+      <hr>
+      {% endfor %}
+      {% else %}
+      <div class="col-md-12">
+        <p>No People Available</p>
+      </div>
+      {% endif %}
 
     </div>
+
   </div>
-
-</div>
-
+</section>
 {% endblock %}
