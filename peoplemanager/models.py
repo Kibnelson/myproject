@@ -92,10 +92,12 @@ class StudentDetail(models.Model):
 	MSc = 'MSc'
 	PhD = 'PhD'
 	ERF = 'ERF'
+	Hons ='Hons'
 	DEGREE_CHOICES = (
 		('MSc','MSc'),
 		('PhD','PhD'),
 		('ERF','ERF'),
+		('Hons','Hons'),
 		)
 	degree = models.CharField(max_length = 8, choices = DEGREE_CHOICES)
 
@@ -111,5 +113,5 @@ class StudentDetail(models.Model):
 	class Meta:
 		verbose_name_plural = "Student details"
 
-	def __str__(self):
-			return self.supervisor + ' | '   + str (self.supervisor_additional) + ' | '  + str (self.institution) + ' | '  + str (self.department) + ' | '  + str (self.thesis_title) + ' | '
+	#def __str__(self):
+		#	return self.supervisor + ' | '   + str (self.supervisor_additional) + ' | '  + str (self.institution) + ' | '  + str (self.department) + ' | '  + str (self.thesis_title) + ' | '

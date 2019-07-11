@@ -15,7 +15,7 @@ from django.utils import timezone # to display date and time as per timezone
 # Create your views here.
 def corestaff(request):
     #peopledetails = PeopleDetail.objects.filter(id=4).select_related() #shows on person online
-    staffdetails = StaffDetail.objects.order_by('id').filter(category__iexact='CS')#code will list all records without joins
+    staffdetails = StaffDetail.objects.order_by('id').filter(category__iexact='CS').filter(is_active__iexact='true')#code will list all records without joins
   
     # Assumes you have a row with a primary key of 1
     #staffdetail = StaffDetail.objects.get(pk=1)
@@ -47,8 +47,18 @@ def researchafellows(request):
 
 
 def students(request):
-    studentdetails = StudentDetail.objects.order_by('id')
-    return render(request, "students.html", {'studentdetails': studentdetails})
+    phdstudentdetails = StudentDetail.objects.filter(degree__iexact='PhD').filter(currently_registered__iexact='Yes')
+    mscstudentdetails = StudentDetail.objects.filter(degree__iexact='MSc').filter(currently_registered__iexact='Yes')
+    erfstudentdetails = StudentDetail.objects.filter(degree__iexact='ERF').filter(currently_registered__iexact='Yes')
+    honsstudentdetails = StudentDetail.objects.filter(degree__iexact='Hons').filter(currently_registered__iexact='Yes')
+    
+    context = {
+        'phdstudentdetails': phdstudentdetails,
+        'mscstudentdetails': mscstudentdetails,
+        'erfstudentdetails': erfstudentdetails,
+        'honsstudentdetails': honsstudentdetails
+    }
+    return render(request, "students.html", context)
 
 def steering_committee(request):
    return render(request, "steering_committee.html", {})
