@@ -31,4 +31,78 @@
     </div>
   </div>
 </section>
+
+<!--Display core Staff code backup -->
+<section id="corestaff" class="py-8">
+  <div class="container">
+
+    <h5 class="text-center"> Core staff</h5>
+      <hr>
+    <div class="row text-center text-light">
+      {% if staffdetails %}
+      {% for staffdetail in staffdetails %}
+
+      <div class="col-md-4 mb-4">
+
+        <img class="card-img" src="{{ staffdetail.person_id.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
+        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+
+
+          <p> {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}, {{ staffdetail.qualification}}</p>
+          <p class="card-text">{{staffdetail.research_theme}}</p>
+        </div>
+
+      </div>
+      <hr>
+      {% endfor %}
+      {% else %}
+      <div class="col-md-12">
+        <p>No People Available</p>
+      </div>
+      {% endif %}
+
+    </div>
+
+  </div>
+</section>
+
+
+
+code in progress
+
+
+<section id="corestaff" class="py-8">
+
+
+    <h5 class="text-center"> Core staff</h5>
+      <hr>
+    <div class="row text-center text-light">
+      {% if staffdetails %}
+      {% for staffdetail in staffdetails %}
+
+      <div class="col-md-4 mb-4">
+        <div class="containercorestaff">
+
+        <img class="card-img" src="{{ staffdetail.person_id.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
+        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+<div class ="contentcorestaff">
+
+          <p> {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}, {{ staffdetail.qualification}}</p>
+          <p class="card-text">{{staffdetail.research_theme}}</p>
+          </div>
+        </div>
+
+      </div>
+      </div>
+      <hr>
+      {% endfor %}
+      {% else %}
+      <div class="col-md-12">
+        <p>No People Available</p>
+      </div>
+      {% endif %}
+
+    </div>
+
+</section>
 {% endblock %}
