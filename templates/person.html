@@ -11,20 +11,20 @@
     <div class="col-sm-3"> <img class="card-img" src="{{ staffdetail.person_id.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px"></div>
 
     <div class="col-sm-9">
-      <p>
-        <h5> {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}, {{staffdetail.qualification}}</h5>
+      <p style="color:#99241B;font-size:2rem;">
+         {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}, {{staffdetail.qualification}}
       </p>
 
 
-      <p>{{staffdetail.job_title}}
+      <p style="color:#99241B;font-size:1.5rem;">{{staffdetail.job_title}}
       </p>
 
       <p>{{staffdetail.research_theme}}
       </p>
       <p>{{staffdetail.person_id.bio}}</p>
 
-        <p>
-          <h5> Publications</h5>
+        <p style="color:#99241B;font-size:1.5rem;">
+           Publications
 
         </p>
         <p>{{staffdetail.person_id.website}}
