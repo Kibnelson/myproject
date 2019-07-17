@@ -1,12 +1,13 @@
-
+{% load static %}
 
 <style>
   .dropdown:hover>.dropdown-menu{
     display:block;
   }
 </style>
+
 <section id="top-bar" class="p-0">
-  <div class="container">
+  <div class="container" class="top-bar">
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-default navbar-custom">
 
@@ -36,7 +37,7 @@
           </li>
       
           <li class="nav-item dropdown">
-            <a href="{% url 'people' %}" class="nav-link text-light" data-toggle="dropdown">People </a>
+            <a href="#" class="nav-link text-light" data-toggle="dropdown">People </a>
             <div class="dropdown-menu">
               <a href="{% url 'corestaff' %}" class="dropdown-item">Core staff</a>
               <div class="dropdown-divider"></div>
@@ -44,7 +45,9 @@
               <div class="dropdown-divider"></div>
               <a href="{% url 'postdcrfellows' %}" class="dropdown-item">Postdoctoral research fellows</a>
               <div class="dropdown-divider"></div>
-              <a href="{% url 'researchafellows' %}" class="dropdown-item">Research associates and fellows</a>
+              <a href="{% url 'steering_committee' %}" class="dropdown-item">Steering committee</a>
+              <div class="dropdown-divider"></div>
+              <a href="{% url 'scientific_advisory' %}" class="dropdown-item">Scientific advisory committee</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -72,8 +75,8 @@
             <a href="#" class="nav-link text-light" data-toggle="dropdown">Resources</a>
             <div class="dropdown-menu">
               <a href="#" class="dropdown-item">Publications</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">Assay based incidence estimation</a>
+              
+          
           </li>
       </div>
 

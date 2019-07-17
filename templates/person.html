@@ -4,22 +4,36 @@
 
 {% block content %}
 
+<div class="container" id="container-white">
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
+  <div class="row">
 
-                <img class="card-img" src="//placehold.it/400" alt="Card image cap">
-                <div class="card-img-overlay h-100 d-flex flex-column justify-content-center">
-                    <h4 class="card-title">Title</h4>
-                      <hp class="card-text">Title</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
+    <div class="col-sm-2"> <img class="card-img" src="{{ staffdetail.person_id.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px"></div>
+
+    <div class="col-sm-10">
+      <p>
+        <h5> {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}, {{staffdetail.qualification}}</h5>
+      </p>
+
+
+      <p> <b>Job title:</b> {{staffdetail.job_title}}
+      </p>
+
+      <p><b>Research theme:</b> {{staffdetail.research_theme}}
+      </p>
+      <p> <b>Bio:</b> {{staffdetail.person_id.bio}}
+      </p>
+      <p><b>Website:</b> {{staffdetail.person_id.website}}
+      </p>
+      <p><b> Email:</b> {{staffdetail.person_id.email}}
+      </p>
+
+      <p>
+        <h5> Publications</h5>
+      </p>
     </div>
+
+  </div>
 </div>
 
 {% endblock %}

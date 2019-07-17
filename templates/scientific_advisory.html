@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
-{%block title%} Steering Committee {% endblock %}
+{%block title%} Scientific Advisory {% endblock %}
 {% block content %}
-
-<!--Display Steering Committee -->
+<!--Display core Staff -->
 <style>
-  .containersc {
+  .containercorestaff {
     position: relative;
     max-width: 600px;
     /* Maximum width */
@@ -12,7 +11,7 @@
     /* Center it */
   }
 
-  .containersc .contentcoresc {
+  .containercorestaff .contentcorestaff {
     position: absolute;
     /* Position the background text */
     bottom: 0;
@@ -30,7 +29,7 @@
 
   }
 
-  .containersc img {
+  .containercorestaff img {
     vertical-align: middle;
   }
 
@@ -38,31 +37,30 @@
     box-sizing: border-box;
   }
 
-  .containersc {
+  .containercorestaff {
 
     font-size: 0.785rem;
   }
 </style>
 
 <!--Display core Staff -->
-<section id="csc" class="py-8">
+<section id="corestaff" class="py-8">
 
 
-    <h5 class="text-center"> Steering committee</h5>
-   
+    <h5 class="text-center"> Scientific Advisory Committee</h5>
+    
     <div class="row text-center text-light">
       {% if staffdetails %}
       {% for staffdetail in staffdetails %}
 
       <div class="col-md-4 mb-4">
-        <div class="containersc">
+        <div class="containercorestaff">
 
         <img class="card-img" src="{{ staffdetail.person_id.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
         <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
-<div class ="contentcorsc">
+<div class ="contentcorestaff">
 
           <p> {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}</p>
-    
           </div>
         </div>
 
@@ -77,5 +75,7 @@
       {% endif %}
 
     </div>
+
 </section>
+
 {% endblock %}

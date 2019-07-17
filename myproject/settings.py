@@ -60,6 +60,8 @@ INSTALLED_APPS = [
     #'peoplemanager',# student staff MIS
     'peoplemanager.apps.PeoplemanagerConfig',
     'TRAP', # Tsetse application
+ 
+    
     #'admin_reorder', #  for reordering apps #pip install django-modeladmin-reorder
     #'constrainedfilefield', #pip install django-constrainedfilefield[filetype]
 ]

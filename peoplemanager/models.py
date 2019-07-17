@@ -39,12 +39,14 @@ class StaffDetail(models.Model):
 	RAF = 'Research Associates And Fellows'
 	PDRF = 'Postdoctoral Research Fellow'
 	SC='Steering Committee'
+	SAC='Scientific Advisory Committee'
 
 	STAFF_CATEGORY_CHOICES = (
 		('CS','Core Staff'),
 		('RAF','Research Associates And Fellows'),
 		('PDRF','Postdoctoral Research Fellow'),
 		('SC','Steering Committee'),
+		('SAC','Scientific Advisory Committee'),
 
 		)
 	category = MultiSelectField(choices = STAFF_CATEGORY_CHOICES)
@@ -80,10 +82,7 @@ class StaffDetail(models.Model):
 
 class StudentDetail(models.Model):
 	person_id= models.ForeignKey(PeopleDetail, on_delete=models.CASCADE,related_name='supervisor', null=True, blank=True)
-	#supervisor = models.ForeignKey(StaffDetail,on_delete=models.CASCADE, related_name='staffperons',null=True,blank=True)
-	#firstnames = models.CharField(max_length=200)
-	#surname	= models.CharField(max_length=200)
-	#supervisor = models.CharField(max_length=200)
+
 	supervisor = models.CharField(max_length=500, null=True, blank=True)
 	supervisor_additional = models.CharField(max_length=500, null=True, blank=True)
 	institution = models.CharField(max_length=500)

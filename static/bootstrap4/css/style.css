@@ -6,42 +6,6 @@ body, html {
 
 
 
-
-/*
-#back_ground {
-  background: maroon;
-  color: white;
-  /*background-image: url("/static/images/background_logo_element.jpg");
-  background-color: black;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-  color:green;
-
-
-/*
-  min-height: 100%;
-    min-width: 1024px
-
-  margin-right: 0px;
-  margin-right: 0px;
-
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  color:white;
-
-*/
-
-
-
-
-
-
-
 #top-bar {
 
    background-color: #f7941e;
@@ -89,8 +53,6 @@ body, html {
     color: #731305;
     background-color: rgba(255,255,255,.5);
 }
-
-
 
 /* bottom black Navbar Colors*/
 .navbar-custom1 {
@@ -151,19 +113,12 @@ body, html {
 #main_footer {
   background-color: white;
 }
- /* image and shaded background */
-.container {
-  position: relative;
-  max-width: 800px; /* Maximum width */
-  margin: 0 auto; /* Center it */
-}
+ 
+ #jumbotron-white {
+  background-color: white;
+ 
+ }
 
-.container .content {
-  position: absolute; /* Position the background text */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* Full width */
-  padding: 20px; /* Some padding */
-}
+  #container-white {
+  background-color: white;
+ }
