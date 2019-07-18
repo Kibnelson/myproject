@@ -23,7 +23,7 @@ class StaffDetailDetailView(DetailView):
 # Create your views here.
 def corestaff(request):
     #peopledetails = PeopleDetail.objects.filter(id=4).select_related() #shows on person online
-    staffdetails = StaffDetail.objects.order_by('id').filter(category__iexact='CS').filter(is_active__iexact='true')#code will list all records without joins
+    staffdetails = StaffDetail.objects.order_by('id').filter(category__icontains='CS').filter(is_active__iexact='true')#code will list all records without joins
 
     # Assumes you have a row with a primary key of 1
     #staffdetail = StaffDetail.objects.get(pk=1)
@@ -51,11 +51,11 @@ def researchafellows(request):
     return render(request, "researchafellows.html", {'staffdetails': staffdetails})
 
 def scientific_advisory(request):
-    staffdetails = StaffDetail.objects.filter(category__iexact='SUSAC').filter(is_active__iexact='true')# this selection is hard wired on the model category options as in the table!
+    staffdetails = StaffDetail.objects.filter(category__icontains='SUSAC').filter(is_active__iexact='true')# this selection is hard wired on the model category options as in the table!
     return render(request, "scientific_advisory.html", {'staffdetails': staffdetails})
 
 def steering_committee(request):
-    staffdetails = StaffDetail.objects.filter(category__iexact='SC' ).filter(is_active__iexact='true')# this selection is hard wired on the model category options as in the table!
+    staffdetails = StaffDetail.objects.filter(category__icontains='SC' ).filter(is_active__iexact='true')# this selection is hard wired on the model category options as in the table!
     return render(request, "steering_committee.html", {'staffdetails': staffdetails})
 
 def students(request):
