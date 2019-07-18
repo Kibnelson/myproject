@@ -1,47 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
 {%block title%} Core Staff {% endblock %}
 {% block content %}
 <!--Display core Staff -->
 <style>
-  .containercorestaff {
-    position: relative;
-    max-width: 600px;
-    /* Maximum width */
-    margin: 0 auto;
-    /* Center it */
-  }
 
-  .containercorestaff .contentcorestaff {
-    position: absolute;
-    /* Position the background text */
-    bottom: 0;
-    /* At the bottom. Use top:0 to append it to the top */
-    background: rgb(0, 0, 0);
-    /* Fallback color */
-    background: rgba(0, 0, 0, 0.5);
-    /* Black background with 0.5 opacity */
-    color: #f1f1f1;
-    /* Grey text */
-    width: 100%;
-    /* Full width */
-    padding: 15px;
-    /* Some padding */
-
-  }
-
-  .containercorestaff img {
-    vertical-align: middle;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  .containercorestaff {
-
-    font-size: 0.785rem;
-
-  }
 </style>
 
 <!--Display core Staff -->
@@ -51,22 +14,24 @@
 
     <p style="color:#99241B;font-size:2rem;" class="text-center">Publications</p>
 
-    <table class="table table-sm">
-      <thead>
-        <tr>
-          <th scope="col">Number</th>
-          <th scope="col">Publication</th>
-          <th scope="col">Publication Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-        </tr>
-      </tbody>
-    </table>
+
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <div class="row">
+        {% if book_list %}
+        <ul>
+          {% for book in book_list %}
+            <li>
+              <a href="{{ book.get_absolute_url }}">{{ book.title }}</a> ({{book.author}})
+            </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+          <p>There are no Publications</p>
+        {% endif %}
+
+
+    </div>
+
 
   </div>
 

@@ -1,81 +1,44 @@
 {% extends 'base.html' %}
-{%block title%} Scientific Advisory {% endblock %}
+{% block title %} Scientific Advisory {% endblock %}
 {% block content %}
 <!--Display core Staff -->
 <style>
-  .containercorestaff {
-    position: relative;
-    max-width: 600px;
-    /* Maximum width */
-    margin: 0 auto;
-    /* Center it */
-  }
-
-  .containercorestaff .contentcorestaff {
-    position: absolute;
-    /* Position the background text */
-    bottom: 0;
-    /* At the bottom. Use top:0 to append it to the top */
-    background: rgb(0, 0, 0);
-    /* Fallback color */
-    background: rgba(0, 0, 0, 0.5);
-    /* Black background with 0.5 opacity */
-    color: #f1f1f1;
-    /* Grey text */
-    width: 100%;
-    /* Full width */
-    padding: 15px;
-    /* Some padding */
-
-  }
-
-  .containercorestaff img {
-    vertical-align: middle;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  .containercorestaff {
-
-    font-size: 0.785rem;
-  }
 </style>
 
-<!--Display core Staff -->
-<section id="corestaff" class="py-8">
+<!--Display  Scientific advisory committee -->
+<section id="SUSAC" class="py-8">
 
+  <div class="container" id="container-white">
 
-    <h5 class="text-center"> Scientific Advisory Committee</h5>
-    
+    <p style="color:#99241B;font-size:2rem;" class="text-center">Scientific advisory committee</p>
+
     <div class="row text-center text-light">
       {% if staffdetails %}
       {% for staffdetail in staffdetails %}
 
       <div class="col-md-4 mb-4">
-        <div class="containercorestaff">
 
         <img class="card-img" src="{{ staffdetail.person_id.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
         <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
-<div class ="contentcorestaff">
+
 
           <p> {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}</p>
-          </div>
+          
+      
         </div>
 
-      </div>
       </div>
       <hr>
       {% endfor %}
       {% else %}
       <div class="col-md-12">
-        <p>No People Available</p>
+        <p>No members</p>
       </div>
       {% endif %}
 
     </div>
 
-</section>
+  </div>
 
+</section>
 {% endblock %}

@@ -46,7 +46,7 @@ class StaffDetail(models.Model):
 		('RAF','Research Associates And Fellows'),
 		('PDRF','Postdoctoral Research Fellow'),
 		('SC','Steering Committee'),
-		('SAC','Scientific Advisory Committee'),
+		('SUSAC','Scientific Advisory Committee'),
 
 		)
 	category = MultiSelectField(choices = STAFF_CATEGORY_CHOICES)

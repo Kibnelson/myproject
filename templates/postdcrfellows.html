@@ -5,11 +5,14 @@
 
 
 <!--Display Postdoctoral Research Fellows -->
-<section id="postdocrfellow" class="py-8">
-  <div class="container">
 
-    <h5 class="text-center">Postdoctoral Research Fellows</h5>
-     
+
+<section id="corestaff" class="py-8">
+
+  <div class="container" id="container-white">
+
+    <p style="color:#99241B;font-size:2rem;" class="text-center">Postdoctoral Research Fellows</p>
+
     <div class="row text-center text-light">
       {% if staffdetails %}
       {% for staffdetail in staffdetails %}
@@ -21,7 +24,8 @@
 
 
           <p> {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}</p>
-          <p class="card-text">{{staffdetail.category}}</p>
+           <p class="card-text">{{staffdetail.category}}</p>
+      
         </div>
 
       </div>
@@ -29,12 +33,14 @@
       {% endfor %}
       {% else %}
       <div class="col-md-12">
-        <p>No People Available</p>
+        <p>No Postdoctoral fellows Available</p>
       </div>
       {% endif %}
 
     </div>
 
   </div>
+
 </section>
+
 {% endblock %}
