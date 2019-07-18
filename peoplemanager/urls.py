@@ -11,7 +11,7 @@ urlpatterns = [
    path('researchafellows/',views.researchafellows, name ='researchafellows') ,
    path('students/',views.students, name ='students') ,
    path('steering_committee/',views.steering_committee, name ='steering_committee') ,
-   path('scientific_advisory/',views.steering_committee, name ='scientific_advisory') ,
+   path('scientific_advisory/',views.scientific_advisory, name ='scientific_advisory') ,
    path('staffdetail/<int:pk>/', StaffDetailDetailView.as_view(), name='staffdetail'),
 
    ]
