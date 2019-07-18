@@ -1,25 +1,19 @@
 from django.shortcuts import render
 from django.views import generic
+from django.views.generic import ListView
 from .models import Archivesuploads, Archivetypes, Interests
 
 # Create your views here.
-class ArchivesuploadsListView(generic.ListView):
+class ArchivesuploadsList(ListView):
     model = Archivesuploads
-    queryset = Archivesuploads.objects.order_by('id')[:20] # get 20 publications per page
-    template_name ='publications.html'# specify your own template name /location
+    template_name = "publications.html"
 
 
-
-def publications(request):
-    archivesupload = Archivesuploads.objects.order_by('id')
-    context = {
-            'archivesupload': archivesupload
-    }
 
     #physicaladdress = Physicaladdress.objects.order_by('id')
     #postaladdress = Postaladdress.objects.order_by('id')
 
-    return render(request, "publications.html", context)
+    #return render(request, "publications.html", context)
 
 
 def home(request):

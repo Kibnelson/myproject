@@ -17,18 +17,20 @@
 
     <input class="form-control" id="myInput" type="text" placeholder="Search..">
     <div class="row">
-        {% if book_list %}
-        <ul>
-          {% for book in book_list %}
-            <li>
-              <a href="{{ book.get_absolute_url }}">{{ book.title }}</a> ({{book.author}})
-            </li>
-          {% endfor %}
-        </ul>
+
+           {% if object_list %}
+    <ul>
+        {% for archiveupload in object_list %}
+            <p>{{ archiveupload.name }}
+         <a href="{{ archiveupload.url }}"> <i>{{ archiveupload.title }}</a></i>
+                <b>{{ archiveupload.publication_date }}</b>
+                  {{ archiveupload.general_doi }}</p>
+        {% endfor %}
+    </ul>
+
         {% else %}
           <p>There are no Publications</p>
         {% endif %}
-
 
     </div>
 
@@ -38,5 +40,10 @@
 
 
 </section>
+
+
+
+
+
 
 {% endblock %}
