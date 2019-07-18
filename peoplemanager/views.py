@@ -36,6 +36,7 @@ def corestaff(request):
 
 
 def person(request):
+
    return render(request, "person.html", {})
 
 

@@ -5,15 +5,14 @@ from .models import Archivesuploads, Archivetypes, Interests
 
 # Create your views here.
 class ArchivesuploadsList(ListView):
-    model = Archivesuploads
+    #model = Archivesuploads
+    context_object_name = 'object_list'
+    queryset = Archivesuploads.objects.order_by('-publication_date')#[:2] add this to limit the number of publications
     template_name = "publications.html"
 
 
 
-    #physicaladdress = Physicaladdress.objects.order_by('id')
-    #postaladdress = Postaladdress.objects.order_by('id')
-
-    #return render(request, "publications.html", context)
+ 
 
 
 def home(request):
