@@ -37,11 +37,9 @@
     box-sizing: border-box;
   }
 
-  .containercorestaff {
-
-    font-size: 0.785rem;
-
+  .containertext {
   }
+
 </style>
 
 <!--Display core Staff -->
@@ -58,12 +56,15 @@
       <div class="col-md-4 mb-4">
 
         <img class="card-img" src="{{ staffdetail.person_id.headshot.url }}" alt="Card image" class="rounded" style="width: 200px" style="height: 261px">
-        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+        <div class="card-img-overlay h-100 d-flex flex-column mt-4 justify-content-end">
 
+<div class ="container" id="containertext" style="width: 200px" style="height: 25px;">
 
-          <p> {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}, {{ staffdetail.qualification}}</p>
-          <p class="card-text">{{staffdetail.research_theme}}</p>
-          <p class="card-text"><a class="text-light" href="{% url 'staffdetail' staffdetail.pk %}">more info..</a></p>
+          <p style="font-size:0.875rem;"> {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}, {{ staffdetail.qualification}}</p>
+          <p style="font-size:0.75rem; class="card-text" >{{staffdetail.research_theme}}</p>
+          <p style="font-size:0.75rem; class="card-text"><a class="text-light" href="{% url 'staffdetail' staffdetail.pk %}">more info...</a></p>
+
+        </div>
         </div>
 
       </div>
