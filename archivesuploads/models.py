@@ -17,6 +17,8 @@ class Archivesuploads(models.Model):
 	def __str__(self):
 		return self.name + ' | ' + str (self.title) + ' | ' + str (self.url) + ' | ' + str (self.publication_date) + '|' + str (self.created)+ '|' + str (self.general_doi)+ '|'
 
+	
+
 class Archivetypes(models.Model):
 	name = models.CharField(max_length=2000,null=True,blank=True)
 	description = models.TextField(max_length=2000,null=True,blank=True)

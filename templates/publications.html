@@ -23,7 +23,7 @@
         {% for archiveupload in object_list %}
             <p>{{ archiveupload.name }}
          <a style="color:#99241B;"href="{{ archiveupload.url }}"> <i>{{ archiveupload.title }}</a></i>
-                <b>{{ archiveupload.publication_date }}</b>
+                <b>({{ archiveupload.publication_date | date:"Y"}})</b>
                   {{ archiveupload.general_doi }}</p>
         {% endfor %}
     </ul>
