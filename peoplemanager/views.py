@@ -3,20 +3,28 @@ from django.shortcuts import render, redirect
 
 
 from .models import StaffDetail, PeopleDetail, StudentDetail
-
+from archivesuploads.models import Archivesuploads
+from archivesuploads.views import Archivesuploads
 
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.urls import reverse
 from django.utils import timezone # to display date and time as per timezone
-from django.views.generic import DetailView
+from django.views.generic import DetailView, ListView
 
-
-
+# Create your views here.
+#this code wil display the publications on the publications page profile
 class StaffDetailDetailView(DetailView):
     model = StaffDetail
     template_name = 'person.html'
+
+#this code wil display the publications on persons profile
+class ArchivesuploadsList(ListView):
+    #model = Archivesuploads
+    context_object_name = 'object_list'
+    queryset = Archivesuploads.objects.order_by('-publication_date')#[:2] add this to limit the number of publications
+    template_name = "person.html"
 
 
 
@@ -37,7 +45,7 @@ def corestaff(request):
 
 def person(request):
 
-   return render(request, "person.html", {})
+    return render(request, "person.html", {})
 
 
 def postdcrfellows(request):

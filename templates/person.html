@@ -29,8 +29,23 @@
         </p>
 
 
+<!---display publications per person----->
 
+           {% if object_list %}
+    <ul>
+        {% for archiveupload in object_list %}
+            <p>{{ archiveupload.name }}
+         <a style="color:#99241B;"href="{{ archiveupload.url }}"> <i>{{ archiveupload.title }}</a></i>
+                <b>({{ archiveupload.publication_date | date:"Y"}})</b>
+                  {{ archiveupload.general_doi }}</p>
+        {% endfor %}
+    </ul>
 
+        {% else %}
+          <p>There are no Publications</p>
+        {% endif %}
+        
+<!---display publications per person----->
 
 
         <p>

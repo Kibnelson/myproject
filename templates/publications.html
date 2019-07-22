@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{%block title%} Core Staff {% endblock %}
+{%block title%} Publications {% endblock %}
 {% block content %}
 <!--Display core Staff -->
 <style>
@@ -17,21 +17,21 @@
 
     <input class="form-control" id="myInput" type="text" placeholder="Search..">
     <div class="row">
-
-           {% if object_list %}
-    <ul>
+      <!--Display publications -->
+      {% if object_list %}
+      <ul>
         {% for archiveupload in object_list %}
-            <p>{{ archiveupload.name }}
-         <a style="color:#99241B;"href="{{ archiveupload.url }}"> <i>{{ archiveupload.title }}</a></i>
-                <b>({{ archiveupload.publication_date | date:"Y"}})</b>
-                  {{ archiveupload.general_doi }}</p>
+        <p>{{ archiveupload.name }}
+          <a style="color:#99241B;" href="{{ archiveupload.url }}" target="_blank"> <i>{{ archiveupload.title }}</a></i>
+          <b>({{ archiveupload.publication_date | date:"Y"}})</b>
+          {{ archiveupload.general_doi }}</p>
         {% endfor %}
-    </ul>
+      </ul>
 
-        {% else %}
-          <p>There are no Publications</p>
-        {% endif %}
-
+      {% else %}
+      <p>There are no Publications</p>
+      {% endif %}
+      <!--display publications -->
     </div>
 
 

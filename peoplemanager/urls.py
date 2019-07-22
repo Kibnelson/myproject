@@ -13,5 +13,4 @@ urlpatterns = [
    path('steering_committee/',views.steering_committee, name ='steering_committee') ,
    path('scientific_advisory/',views.scientific_advisory, name ='scientific_advisory') ,
    path('staffdetail/<int:pk>/', StaffDetailDetailView.as_view(), name='staffdetail'),
-
    ]
