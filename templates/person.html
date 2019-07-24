@@ -12,7 +12,7 @@
 
     <div class="col-sm-9">
       <p style="color:#99241B;font-size:2rem;">
-         {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}, {{staffdetail.qualification}}
+        {{staffdetail.person_id.firstnames}} {{staffdetail.person_id.surname}}, {{staffdetail.qualification}}
       </p>
 
 
@@ -23,38 +23,55 @@
       </p>
       <p style="text-align: justify">{{staffdetail.person_id.bio}}</p>
 
-        <p style="color:#99241B;font-size:1.5rem;">
-           Publications
+      <p style="color:#99241B;font-size:1.5rem;">
+        Publications
 
-        </p>
+      </p>
 
 
-<!---display publications per person----->
+      <!---display publications per person----->
 
-           {% if object_list %}
-    <ul>
+      {% if object_list %}
+      <ul>
         {% for archiveupload in object_list %}
-            <p>{{ archiveupload.name }}
-         <a style="color:#99241B;"href="{{ archiveupload.url }}"> <i>{{ archiveupload.title }}</a></i>
-                <b>({{ archiveupload.publication_date | date:"Y"}})</b>
-                  {{ archiveupload.general_doi }}</p>
+        <p>{{ archiveupload.name }}
+          <a style="color:#99241B;" href="{{ archiveupload.url }}" target="_blank"> <i>{{ archiveupload.title }}</a></i>
+          <b>({{ archiveupload.publication_date | date:"Y"}})</b>
+          {{ archiveupload.general_doi }}</p>
         {% endfor %}
-    </ul>
+      </ul>
 
-        {% else %}
-          <p>There are no Publications</p>
-        {% endif %}
-        
-<!---display publications per person----->
+      {% else %}
+      <p>There are no Publications</p>
+      {% endif %}
+      
+      <!--display publications -->
+      <!---display publications per person----
+
+      {% if object_list %}
+      <ul>
+        {% for archiveupload in object_list %}
+        <p>{{ archiveupload.name }}
+          <a style="color:#99241B;" href="{{ archiveupload.url }}"> <i>{{ archiveupload.title }}</a></i>
+          <b>({{ archiveupload.publication_date | date:"Y"}})</b>
+          {{ archiveupload.general_doi }}</p>
+        {% endfor %}
+      </ul>
+
+      {% else %}
+      <p>There are no Publications</p>
+      {% endif %}
+
+      <!---display publications per person----->
 
 
-        <p>
-         <a href="#" class="card-link btn btn-warning btn text-light" class="card-footer">Full publication list</a> </p>
-        <p> {{staffdetail.person_id.website}}
+      <p>
+        <a href="#" class="card-link btn btn-warning btn text-light" class="card-footer">Full publication list</a> </p>
+      <p> {{staffdetail.person_id.website}}
 
-        </p>
-        <p> {{staffdetail.person_id.email}}
-        </p>
+      </p>
+      <p> {{staffdetail.person_id.email}}
+      </p>
 
 
     </div>

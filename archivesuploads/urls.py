@@ -1,10 +1,12 @@
 
 from django.urls import path, include
-from archivesuploads.views import ArchivesuploadsList
+from .views import ArchivesuploadsListView
 from . import views
+#from mysite.search import views
 
 
 urlpatterns = [
-   path('publications/',views.ArchivesuploadsList.as_view(), name ='publications'),
+   path('publications/',views.ArchivesuploadsListView.as_view(), name ='publications'),
+ 
 
 ]

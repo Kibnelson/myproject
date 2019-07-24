@@ -1,17 +1,16 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
-
-
 from .models import StaffDetail, PeopleDetail, StudentDetail
-from archivesuploads.models import Archivesuploads
-from archivesuploads.views import Archivesuploads
+
+
 
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from django.urls import reverse
 from django.utils import timezone # to display date and time as per timezone
-from django.views.generic import DetailView, ListView
+from django.views.generic import ListView, DetailView, View, TemplateView
+from archivesuploads.models import Archivesuploads, Archivetypes, Interests
 
 # Create your views here.
 #this code wil display the publications on the publications page profile
@@ -20,12 +19,20 @@ class StaffDetailDetailView(DetailView):
     template_name = 'person.html'
 
 #this code wil display the publications on persons profile
-class ArchivesuploadsList(ListView):
+#class ArchivesuploadsList(ListView):
+    #model = Archivesuploads
+    #context_object_name = 'object_list'
+    #queryset = Archivesuploads.objects.order_by('-publication_date')   #[:2] add this to limit the number of publications
+    #template_name = "person.html"
+
+
+
+
+class ArchivesuploadsListView(ListView):
     #model = Archivesuploads
     context_object_name = 'object_list'
-    queryset = Archivesuploads.objects.order_by('-publication_date')#[:2] add this to limit the number of publications
+    queryset = Archivesuploads.objects.all()#[:2] add this to limit the number of publications
     template_name = "person.html"
-
 
 
 # Create your views here.
@@ -43,9 +50,9 @@ def corestaff(request):
     return render(request, "corestaff.html", {'staffdetails': staffdetails})
 
 
-def person(request):
+#def person(request):
 
-    return render(request, "person.html", {})
+    #return render(request, "person.html", {})
 
 
 def postdcrfellows(request):

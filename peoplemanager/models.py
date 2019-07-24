@@ -1,4 +1,5 @@
 from django.db import models
+from archivesuploads.models import Archivesuploads # added as per blog post
 from multiselectfield import MultiSelectField
 
 
