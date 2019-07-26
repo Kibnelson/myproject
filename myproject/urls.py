@@ -21,6 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.decorators import login_required
 from django.views.static import serve
+
 """
 @login_required
 def protected_serve(request, path, document_root=None, show_indexes=False):
@@ -28,10 +29,14 @@ def protected_serve(request, path, document_root=None, show_indexes=False):
 """
 admin.site.site_header = 'SACEMA Administration Dashboard'
 admin.site.site_title = 'SACEMA Administration'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('myapp.urls')),
-    path('',include('peoplemanager.urls')),
-    path('',include('contactus.urls')),
-    path('',include('archivesuploads.urls')),
+    path('', include('myapp.urls')),
+    path('', include('peoplemanager.urls')),
+    path('', include('contactus.urls')),
+    path('', include('archivesuploads.urls')),
+    path('', include('newsandevents.urls')),
+
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

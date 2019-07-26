@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'myapp.apps.MyappConfig', # format for renaming django apps
     'calendarevents.apps.CalendareventsConfig',
     #'grappelli',#install grappelli first (silenced skinns)
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'archivesuploads.apps.ArchivesuploadsConfig', # format for renaming django apps
-    'News',
+
     'django.contrib.humanize', #for django templates
     'multiselectfield', #For multiple select fields in django admin
 
@@ -60,13 +61,23 @@ INSTALLED_APPS = [
     #'peoplemanager',# student staff MIS
     'peoplemanager.apps.PeoplemanagerConfig',
     'TRAP', # Tsetse application
- 
-    
+    'newsandevents.apps.NewsandeventsConfig',
+
+
+
+
+
     #'admin_reorder', #  for reordering apps #pip install django-modeladmin-reorder
     #'constrainedfilefield', #pip install django-constrainedfilefield[filetype]
 ]
 
 MIDDLEWARE = [
+
+
+
+
+
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -78,6 +89,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'myproject.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -85,6 +97,8 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+
+
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -94,6 +108,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
@@ -133,11 +148,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
 
 TIME_ZONE = 'UTC'
 
@@ -150,7 +164,6 @@ USE_TZ = False # changed to false from True so as to pick the current time zo
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
 
 
 STATIC_URL = '/static/'
