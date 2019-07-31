@@ -80,19 +80,9 @@ INSTALLED_APPS = [
     'peoplemanager.apps.PeoplemanagerConfig',
     'TRAP', # Tsetse application
     'newsandevents.apps.NewsandeventsConfig',
-
-
-
-
-
     #'admin_reorder', #  for reordering apps #pip install django-modeladmin-reorder
     #'constrainedfilefield', #pip install django-constrainedfilefield[filetype]
 ]
-
-
-
-
-
 
 CMS_TEMPLATES = [
 ('base2.html', 'other pages except home')
@@ -141,8 +131,6 @@ TEMPLATES = [
 
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
-
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases connection string
 
@@ -201,10 +189,6 @@ STATIC_DIRS = 'static'
 #STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = '/media/' #media root configuration
 MEDIA_ROOT = os.path.join(BASE_DIR,"media") #media root configuration
-
-
-
-
 
 CONTENT_TYPES = ['file']
 # 2.5MB - 2621440
