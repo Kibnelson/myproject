@@ -37,6 +37,7 @@ urlpatterns = [
     path('', include('contactus.urls')),
     path('', include('archivesuploads.urls')),
     path('', include('newsandevents.urls')),
+    path('', include('cms.urls')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

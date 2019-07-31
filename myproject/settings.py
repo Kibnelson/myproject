@@ -27,14 +27,21 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','146.232.93.23','146.232.66.100','146.232.66.118']
 
-
+SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
+
+    'django.contrib.sites',
+    'cms',
+    'menus',
+    'treebeard',
+    'sekizai',
+
     'myapp.apps.MyappConfig', # format for renaming django apps
     'calendarevents.apps.CalendareventsConfig',
     #'grappelli',#install grappelli first (silenced skinns)
-
+    #'djangocms_admin_style',#this code wil display the cms admin style but temporarily silenced
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,10 +49,21 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'archivesuploads.apps.ArchivesuploadsConfig', # format for renaming django apps
-
     'django.contrib.humanize', #for django templates
     'multiselectfield', #For multiple select fields in django admin
+    'filer',
+    'easy_thumbnails',
+    'mptt',
+    'djangocms_text_ckeditor',
 
+    'djangocms_link',
+    'djangocms_file',
+    'djangocms_picture',
+    'djangocms_video',
+    'djangocms_googlemap',
+    'djangocms_snippet',
+    'djangocms_style',
+    'djangocms_column',
    #'contactus',
    'djgeojson', # application for maps in django on django admin # pip3 install "django-geojson [field]"
    'leaflet', # application for maps in django on django admin
@@ -71,10 +89,21 @@ INSTALLED_APPS = [
     #'constrainedfilefield', #pip install django-constrainedfilefield[filetype]
 ]
 
+
+
+
+
+
+CMS_TEMPLATES = [
+('base2.html', 'other pages except home')
+]
+
 MIDDLEWARE = [
-
-
-
+    'cms.middleware.utils.ApphookReloadMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.page.CurrentPageMiddleware',
+    #'cms.middleware.toolbar.ToolbarMiddleware',
+    'cms.middleware.language.LanguageCookieMiddleware',
 
 
     'django.middleware.locale.LocaleMiddleware',
@@ -97,8 +126,8 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
-
-
+                'cms.context_processors.cms_settings',
+                'sekizai.context_processors.sekizai',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
