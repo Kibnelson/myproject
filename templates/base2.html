@@ -1,12 +1,9 @@
 {% load staticfiles %}
-{% load cms_tags sekizai_tags %}
  <!DOCTYPE html>
  <html lang="en">
 
  <head>
    <!-- Required meta tags -->
-
-
    <meta charset="utf-8">
    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
    <!-- Bootstrap core  -->
@@ -27,15 +24,10 @@
    <!-- Bootstrap CSS -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 
-    <title>{% page_attribute "page_title" %}</title>
-
-     {% render_block "css" %}
 
  </head>
 
  <body>
-   {% cms_toolbar %}
-     {% placeholder "content" %}
    <!-- Top Nav Bar -->
    {% include 'partials/_topnavbar.html' %}
 
@@ -53,14 +45,15 @@
     margin: 0px auto;
 
 
-    background-image: url("/static/images/step0001.jpg");
+    background-image: url("/static/images/backgroundnowing.jpg");
     background-size: cover;
-     /*background-position: center center;*/
+
      background-repeat: no-repeat;
     background-attachment: fixed;
-    /*background-position: right;*/
-     /*margin: 0px auto;*/
+     margin: 0px auto;
+
   }
+
 
 .jombotron-white {
   position: relative;
@@ -93,7 +86,6 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
- {% render_block "js" %}
  </body>
 
  </html>
