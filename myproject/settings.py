@@ -84,24 +84,31 @@ INSTALLED_APPS = [
 ]
 
 CMS_TEMPLATES = [
-('base2.html', 'other pages except home')
+('base.html', 'other pages except home'),
+#('base_biochemical_pathways.html', 'Biochemical Pathways'),
+#('base_combating_infections.html', 'Combating Infections'),
+#('base_measuring_infections.html', 'Measuring infections'),
+#('base_rapid_response.html', 'Rapid response'),
 ]
+
+CMS_PERMISSION = True
+
+CMS_PLACEHOLDER_CONF = {}
+
 
 MIDDLEWARE = [
     'cms.middleware.utils.ApphookReloadMiddleware',
-    'cms.middleware.user.CurrentUserMiddleware',
-    'cms.middleware.page.CurrentPageMiddleware',
-    #'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware',
-
-    'django.middleware.locale.LocaleMiddleware',
-    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.toolbar.ToolbarMiddleware',
+    'cms.middleware.language.LanguageCookieMiddleware'
 ]
 
 ROOT_URLCONF = 'myproject.urls'
@@ -162,6 +169,14 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters'
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
