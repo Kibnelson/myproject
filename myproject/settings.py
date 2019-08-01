@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 
     'myapp.apps.MyappConfig', # format for renaming django apps
     'calendarevents.apps.CalendareventsConfig',
-    #'grappelli',#install grappelli first (silenced skinns)
     #'djangocms_admin_style',#this code wil display the cms admin style but temporarily silenced
     'django.contrib.admin',
     'django.contrib.auth',
@@ -166,7 +165,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
-
+LANGUAGES = [
+('en','English')
+]
 
 LANGUAGE_CODE = 'en'
 
