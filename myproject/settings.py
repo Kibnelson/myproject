@@ -142,7 +142,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', # pip3 install mysqlclient
-        'NAME': 'sacema02',
+        'NAME': 'sacematest',
         'USER': 'postgres',
         'PASSWORD': 'admin',
         'HOST': 'localhost',
