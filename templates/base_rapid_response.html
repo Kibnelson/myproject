@@ -4,8 +4,6 @@
 <html lang="en">
 
 <head>
-  <title>{% page_attribute "page_title" %}</title>
-  {% render_block "css" %}
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width = device-width, initial-scale = 1.0">
@@ -31,11 +29,22 @@
 
 <body>
   {% cms_toolbar %}
+
   <!-- Top Nav Bar -->
   {% include 'partials/_topnavbar.html' %}
 
   <!-- Top Sacema Logo -->
   {% include 'partials/_toplogo.html' %}
+
+
+  {% block content %}
+  {% placeholder "feature" %}
+  {% placeholder "content" %}
+  {% placeholder "splashbox" %}
+  {% endblock content %}
+
+
+
 
   <!--Background Image -->
   <style>
@@ -72,12 +81,7 @@
     }
   </style>
 
-  {% block content %}
-  {% placeholder "feature" %}
   {% placeholder "content" %}
-  {% placeholder "splashbox" %}
-  {% endblock content %}
-
 
   <!--LowerNav Bar -->
   {% include 'partials/_lowernavbar.html' %}
@@ -100,7 +104,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
 
-{% render_block "js" %}
+  {% render_block "js" %}
 </body>
 
 </html>

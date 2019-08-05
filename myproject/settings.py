@@ -84,11 +84,11 @@ INSTALLED_APPS = [
 ]
 
 CMS_TEMPLATES = [
-('base.html', 'other pages except home'),
-#('base_biochemical_pathways.html', 'Biochemical Pathways'),
-#('base_combating_infections.html', 'Combating Infections'),
-#('base_measuring_infections.html', 'Measuring infections'),
-#('base_rapid_response.html', 'Rapid response'),
+('base.html', 'Main Site'),
+('base_biochemical_pathways.html', 'Biochemical Pathways'),
+('base_combating_infections.html', 'Combating Infections'),
+('base_measuring_infections.html', 'Measuring infections'),
+('base_rapid_response.html', 'Rapid response'),
 ]
 
 CMS_PERMISSION = True
@@ -186,7 +186,7 @@ LANGUAGES = [
 
 LANGUAGE_CODE = 'en'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Johannesburg'
 
 USE_I18N = True
 
