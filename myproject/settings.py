@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'mptt',
     'djangocms_text_ckeditor',
 
+
     'djangocms_link',
     'djangocms_file',
     'djangocms_picture',
@@ -205,6 +206,11 @@ STATIC_DIRS = 'static'
 #STATIC_ROOT ='/myproject/site/assets/static'
 MEDIA_URL = '/media/' #media root configuration
 MEDIA_ROOT = os.path.join(BASE_DIR,"media") #media root configuration
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
 
 CONTENT_TYPES = ['file']
 # 2.5MB - 2621440
