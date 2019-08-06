@@ -4,6 +4,8 @@
 <html lang="en">
 
 <head>
+  <title>{% page_attribute "page_title" %}</title>
+  {% render_block "css" %}
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width = device-width, initial-scale = 1.0">
@@ -12,6 +14,9 @@
   <!-- Custom css -->
   <link rel="stylesheet" type="text/css" href="{% static 'bootstrap4/css/style.css' %}">
 
+<style>
+
+</style>
 
   <!-- Required Jquery -->
 
@@ -29,40 +34,15 @@
 
 <body>
   {% cms_toolbar %}
-
   <!-- Top Nav Bar -->
   {% include 'partials/_topnavbar.html' %}
 
   <!-- Top Sacema Logo -->
   {% include 'partials/_toplogo.html' %}
 
-
-  {% block content %}
-  {% placeholder "feature" %}
-  {% placeholder "content" %}
-  {% placeholder "splashbox" %}
-  {% endblock content %}
-
-
-
-
   <!--Background Image -->
   <style>
-    body {
-      width: 100%;
-      height: 100%;
-      padding: 0px;
-      margin: 0px auto;
 
-
-      background-image: url("/static/images/step0001.jpg");
-      background-size: cover;
-      /*background-position: center center;*/
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      /*background-position: right;*/
-      /*margin: 0px auto;*/
-    }
 
     .jombotron-white {
       position: relative;
@@ -81,18 +61,21 @@
     }
   </style>
 
+  {% block content %}
+  {% placeholder "feature" %}
   {% placeholder "content" %}
+  {% placeholder "splashbox" %}
+  {% endblock content %}
+
 
   <!--LowerNav Bar -->
   {% include 'partials/_lowernavbar.html' %}
 
-
-
   <!--Bottom NRF, Stellenbosch University and DST logos -->
   {% include 'partials/_bottomlogos.html' %}
 
-
   <!--Footer showing copyright and year -->
+
   {% include 'partials/_footer.html' %}
 
   <!-- Bootstrap core JavaScript
@@ -104,7 +87,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
 
-  {% render_block "js" %}
+{% render_block "js" %}
 </body>
 
 </html>
