@@ -202,7 +202,7 @@ USE_TZ = False # changed to false from True so as to pick the current time zo
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_DIRS = 'static'
-#STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = '/media/' #media root configuration
 MEDIA_ROOT = os.path.join(BASE_DIR,"media") #media root configuration
 
