@@ -60,10 +60,21 @@
       background-color: white;
     }
 
-    .background_in_rapid_response{
-      background-color: maroon;
-     min-height: 400px;
+    .theme_background{
+      width: 100%;
+      height: 100%;
+      padding: 0px;
+      margin: 0px auto;
+      min-height: 200px;
+
+
+      background-image: url("/static/images/theme1.jpg");
+      background-size: cover;
+      /*background-position: center center;*/
+      background-repeat: no-repeat;
+      background-attachment: scroll;
     }
+
   </style>
 
   {% block content %}
@@ -72,10 +83,9 @@
   {% placeholder "splashbox" %}
   {% endblock content %}
 
-<p class="background_in_rapid_response">
+<div class="theme_background">
 
-</p>
-
+</div>
   <!--LowerNav Bar -->
   {% include 'partials/_lowernavbar.html' %}
 

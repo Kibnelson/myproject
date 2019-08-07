@@ -90,6 +90,10 @@ CMS_TEMPLATES = [
 ('base_combating_infections.html', 'Combating Infections'),
 ('base_measuring_infections.html', 'Measuring infections'),
 ('base_rapid_response.html', 'Rapid response'),
+
+('base_building.html', 'Building Great Collaborations'),
+('base_commissioned.html', 'Undertaking Commissioned work'),
+('base_research.html', 'Research and Training'),
 ]
 
 CMS_PERMISSION = True
