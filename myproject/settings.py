@@ -209,7 +209,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'myproject/static')]
 #media folder settings
 MEDIA_ROOT = os.path.join(BASE_DIR, "media") #media root configuration
 MEDIA_URL = '/media/' #media root configuration
-
+#this is a comment
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
