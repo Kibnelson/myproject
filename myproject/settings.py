@@ -203,6 +203,16 @@ USE_TZ = False # changed to false from True so as to pick the current time zo
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_DIRS = 'static'
+#STATIC_ROOT = os.path.join(BASE_DIR, "static")
+MEDIA_URL = '/media/' #media root configuration
+MEDIA_ROOT = os.path.join(BASE_DIR,"media") #media root configuration
+
+
+""" config to work in production environment
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'myproject/static')]
@@ -210,6 +220,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'myproject/static')]
 MEDIA_ROOT = os.path.join(BASE_DIR, "media") #media root configuration
 MEDIA_URL = '/media/' #media root configuration
 #this is a comment
+"""
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
