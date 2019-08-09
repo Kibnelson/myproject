@@ -14,9 +14,9 @@
   <!-- Custom css -->
   <link rel="stylesheet" type="text/css" href="{% static 'bootstrap4/css/style.css' %}">
 
-<style>
+  <style>
 
-</style>
+  </style>
 
   <!-- Required Jquery -->
 
@@ -74,11 +74,14 @@
       background-color: white;
     }
   </style>
+  <!--page content-->
 
   {% block content %}
-  {% placeholder "feature" %}
-  {% placeholder "content" %}
-  {% placeholder "splashbox" %}
+ <div class="container" style="background-color:white;">
+   <div>
+       {% placeholder "content" %}
+   </div>
+      </div>
   {% endblock content %}
 
 
@@ -101,7 +104,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="{% static "/bootstrap4/js/bootstrap.min.js" %}"> </script>
 
-{% render_block "js" %}
+  {% render_block "js" %}
 </body>
 
 </html>
