@@ -8,16 +8,24 @@
 
   /* This code increases spacing between list items in a nav-bar */
   .navbar-nav>li {
-    padding-left: 20px;
-    padding-right: 20px;
+    color: white;
   }
 
+  .navbar {
+ min-height: 65px;
+}
 
-  ul {
-    list-style-type: none;
+  li a:hover {
+    background-color: #F7941E;
+    color: #731305;
+  }
 
+  li {
     display: inline;
-
+    list-style-type: none;
+    padding-right: 20px;
+    padding-left: 20px;
+    font: white;
   }
 </style>
 
@@ -25,12 +33,12 @@
   <div class="container" class="top-bar">
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-default navbar-custom">
-      <div class="container ">
+        <div class="container" class="top-bar">
+
         <a class="navbar-brand" href="#"></a>
         <ul class="navbar-nav m-auto">
-          {% show_menu 0 100 100 100 "menu/custom-menu.html" %}
+          {%  show_menu 0 100 100 100 "menu/custom-menu.html" %}
         </ul>
       </div>
     </nav>
-  </div>
 </section>
