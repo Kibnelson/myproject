@@ -8,118 +8,37 @@
 
   /* This code increases spacing between list items in a nav-bar */
   .navbar-nav>li {
-    padding-left: 20px;
-    padding-right: 20px;
+    color: white;
   }
 
-
-  ul {
-  list-style-type: none;
-
-  display: inline;
-
+  .navbar {
+ min-height: 65px;
 }
+
+  li a:hover {
+    background-color: #F7941E;
+    color: #731305;
+  }
+
+  li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+    padding-left: 20px;
+    font: white;
+  }
 </style>
 
 <section id="top-bar" class="p-0">
   <div class="container" class="top-bar">
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-default navbar-custom">
+        <div class="container" class="top-bar">
 
-      <div class="container ">
         <a class="navbar-brand" href="#"></a>
-
         <ul class="navbar-nav m-auto">
-          <li class="nav-item">
-            <a class="nav-link text-light" href="{% url 'home' %}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="{% url 'about' %}">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link text-light" data-toggle="dropdown">Research</a>
-            <div class="dropdown-menu">
-
-              <a href="#" class="dropdown-item">Rapid response to emerging threats</a>
-
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">Combating infections of national priority</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">Biochemical pathways to disease</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">Measuring infection</a>
-
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="{% url 'publications' %}">Publications</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link text-light" data-toggle="dropdown">People </a>
-            <div class="dropdown-menu">
-              <a href="{% url 'corestaff' %}" class="dropdown-item">Core staff</a>
-              <div class="dropdown-divider"></div>
-              <a href="{% url 'students' %}" class="dropdown-item">Students</a>
-              <div class="dropdown-divider"></div>
-              <a href="{% url 'postdcrfellows' %}" class="dropdown-item">Postdoctoral research fellows</a>
-              <div class="dropdown-divider"></div>
-              <a href="{% url 'researchafellows' %}" class="dropdown-item">Research associates and fellows</a>
-              <div class="dropdown-divider"></div>
-              <a href="{% url 'steering_committee' %}" class="dropdown-item">Steering committee</a>
-              <div class="dropdown-divider"></div>
-              <a href="{% url 'scientific_advisory' %}" class="dropdown-item">Scientific advisory committee</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link text-light" data-toggle="dropdown">Opportunities </a>
-            <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">Short courses</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">Postgraduate bursaries</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">Fund for ERF</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">Postdoctoral fellowships</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">Job openings</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link text-light" data-toggle="dropdown">News</a>
-
-
-
-
-          </li>
-
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link text-light" data-toggle="dropdown">Resources</a>
-
-
-
-          </li>
-              </ul>
-      </div>
-
-
-
-
-    </nav>
-
-
-
-    <nav class="navbar navbar-expand-sm navbar-dark bg-default navbar-custom">
-
-      <div class="container ">
-        <a class="navbar-brand" href="#"></a>
-
-        <ul class="navbar-nav m-auto">
-
-          {% show_menu 0 100 100 100 "menu/custom-menu.html" %}
-
+          {%  show_menu 0 100 100 100 "menu/custom-menu.html" %}
         </ul>
       </div>
-
     </nav>
-
-  </div>
-
 </section>
