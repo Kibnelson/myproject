@@ -86,10 +86,7 @@ INSTALLED_APPS = [
 
 CMS_TEMPLATES = [
 ('base.html', 'Main Site'),
-('base_biochemical_pathways.html', 'Biochemical Pathways'),
-('base_combating_infections.html', 'Combating Infections'),
-('base_measuring_infections.html', 'Measuring infections'),
-('base_rapid_response.html', 'Rapid response'),
+('base_research_theme.html', 'Research Theme'),
 
 ('base_building.html', 'Building Great Collaborations'),
 ('base_commissioned.html', 'Undertaking Commissioned work'),

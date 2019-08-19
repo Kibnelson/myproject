@@ -1,15 +1,24 @@
 {% load static %}
+{% load cms_tags menu_tags sekizai_tags %}
 
 <style>
-  .dropdown:hover>.dropdown-menu{
-    display:block;
-  }
-/* This code increases spacing between list items in a nav-bar */
-  .navbar-nav > li{
-    padding-left:20px;
-    padding-right:20px;
+  .dropdown:hover>.dropdown-menu {
+    display: block;
   }
 
+  /* This code increases spacing between list items in a nav-bar */
+  .navbar-nav>li {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  ul {
+  list-style-type: none;
+
+  display: inline;
+
+}
 </style>
 
 <section id="top-bar" class="p-0">
@@ -31,17 +40,17 @@
             <a href="#" class="nav-link text-light" data-toggle="dropdown">Research</a>
             <div class="dropdown-menu">
 
-                <a href="#" class="dropdown-item">Rapid response to emerging threats</a>
+              <a href="#" class="dropdown-item">Rapid response to emerging threats</a>
 
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">Combating infections of national priority</a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">Biochemical pathways to disease</a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">Measuring infection</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">Combating infections of national priority</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">Biochemical pathways to disease</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">Measuring infection</a>
 
           </li>
-<li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link text-light" href="{% url 'publications' %}">Publications</a>
           </li>
           <li class="nav-item dropdown">
@@ -53,7 +62,7 @@
               <div class="dropdown-divider"></div>
               <a href="{% url 'postdcrfellows' %}" class="dropdown-item">Postdoctoral research fellows</a>
               <div class="dropdown-divider"></div>
-               <a href="{% url 'researchafellows' %}" class="dropdown-item">Research associates and fellows</a>
+              <a href="{% url 'researchafellows' %}" class="dropdown-item">Research associates and fellows</a>
               <div class="dropdown-divider"></div>
               <a href="{% url 'steering_committee' %}" class="dropdown-item">Steering committee</a>
               <div class="dropdown-divider"></div>
@@ -87,13 +96,30 @@
 
 
           </li>
+              </ul>
       </div>
 
 
-      </ul>
+
+
+    </nav>
+
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-default navbar-custom">
+
+      <div class="container ">
+        <a class="navbar-brand" href="#"></a>
+
+        <ul class="navbar-nav m-auto">
+
+          {% show_menu 0 100 100 100 "menu/custom-menu.html" %}
+
+        </ul>
+      </div>
 
     </nav>
 
   </div>
-  </div>
+
 </section>
