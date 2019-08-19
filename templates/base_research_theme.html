@@ -42,6 +42,9 @@
 
   <!--Background Image -->
   <style>
+
+
+
     .jombotron-white {
       position: relative;
       margin-left: auto;
@@ -84,16 +87,15 @@
 
 
 #theme-image {
-  height: 500px;
+  height: 350px;
   background-image: url('/static/images/theme1.jpg');
-
   background-attachment: scroll;
-   position: relative;
-
+  position: relative;
   color: #fff;
   border-bottom: 0px #eee solid;
   padding-top: 50px;
-  padding-bottom: 0px;
+  padding:0;
+  margin:0;
 }
 
 #theme-image img{
@@ -122,7 +124,7 @@
   </div>
 </section>
 
-  <section class="bottomsections">
+
   <!--LowerNav Bar -->
   {% include 'partials/_lowernavbar.html' %}
 
@@ -132,7 +134,7 @@
   <!--Footer showing copyright and year -->
 
   {% include 'partials/_footer.html' %}
-</section>
+
   <!-- Bootstrap core JavaScript
      ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
