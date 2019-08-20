@@ -81,15 +81,14 @@
       max-width: 1000px;
     }
 
-<<<<<<< HEAD
-    .bottomsection {
-=======
-    .bottomsectionscancelled {
->>>>>>> updatecss
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
+     li {
+    display: inline-flex;
+    float: left;
+  }
+
+  .nav a {
+    color: white;
+  }
   </style>
   <!--page content-->
 
