@@ -103,9 +103,9 @@ body, html {
   }
 
 
-  #lower_navbar {
-
-  }
+section#lower_navbar {
+    padding-top: 0em !important;
+}
 
 
 #main_footer {
@@ -121,3 +121,9 @@ body, html {
   background-color: white;
 
  }
+ section#showcase {
+    background: url(/static/images/step0002.jpg);
+    width: 100%;
+    height: 841px;
+    background-size: cover;
+}

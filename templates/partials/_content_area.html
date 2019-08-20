@@ -1,0 +1,43 @@
+{% load static %}
+{% load cms_tags menu_tags sekizai_tags %}
+<style>
+
+
+/* .background_image1 {
+  background: url('/static/images/step0002.jpg'); /*code pulls through the image in css*/
+  /* background-size: cover; */
+
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  /* not in use as yet*/
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+  </style>
+  <section id="showcase">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item background_image1 active" class="box sixteen-nine">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block text-left mb-5 text-dark">
+              {% block content %}
+
+              <div class="jumbotron" class= "main_content_jumbotron" style="background-color:white;">
+
+                  {% placeholder "content" %}
+
+              </div>
+
+              {% endblock content %}
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
