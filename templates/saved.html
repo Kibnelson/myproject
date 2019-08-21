@@ -195,12 +195,6 @@ code in progress
 </section>
 
 
-
-
-
-
-
-
 /* code to generate backgdound picture of the mid section of the page */
 
   body {
@@ -219,5 +213,36 @@ code in progress
      /*margin: 0px auto;*/
   }
   */
-  
+
+
+
+
+
+
+
+  <section id="showcase">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item background_image1 active" class="box sixteen-nine">
+          <div class="container">
+            <div class="carousel-caption d-none d-sm-block text-left mb-5 text-dark">
+              {% block content %}
+
+              <div class="jumbotron" class= "main_content_jumbotron" style="background-color:white;">
+
+                  {% placeholder "content" %}
+
+              </div>
+
+              {% endblock content %}
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 {% endblock %}
