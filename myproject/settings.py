@@ -85,9 +85,9 @@ INSTALLED_APPS = [
 ]
 
 CMS_TEMPLATES = [
-('base.html', 'Main Site Template'),
-('base_other_main.html', 'Extra Main Template'),
-('base_research_theme.html', 'Research Theme'),
+('base.html', 'Main Site Centred logo'),
+('base_left_logo.html', 'Main Site left logo'),
+('base_research_theme.html', 'Research Theme left logo'),
 
 ('base_building.html', 'Building Great Collaborations'),
 ('base_commissioned.html', 'Undertaking Commissioned work'),
