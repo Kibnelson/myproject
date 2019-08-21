@@ -17,30 +17,31 @@
   }
 
   div.ex1 {
-  background-color: white;
-  /* width: 85%; */
-  height: 100%;
-  overflow: scroll;
-  margin-left:300Px;
-    margin-right:300Px;
+    background-color: white;
+    /* width: 85%; */
+    height: 100%;
+    overflow: scroll;
+    margin-left: 300Px;
+    margin-right: 300Px;
+    min-width: 500px;
+    padding-right: 15px;
+    padding-left: 15px;
 
-}
+  }
 </style>
 
 <section id="showcase">
 
 
 
-	<div class="ex1">
+  <div class="ex1">
     {% block content %}
 
 
 
-        {% placeholder "content" %}
+    {% placeholder "content" %}
 
     {% endblock content %}
 
-
-
-	</div>
+  </div>
 </section>
