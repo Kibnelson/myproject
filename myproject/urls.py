@@ -35,7 +35,7 @@ urlpatterns = [
     path('', include('myapp.urls')),
     path('', include('peoplemanager.urls')),
     path('', include('contactus.urls')),
-    path('', include('archivesuploads.urls')),
+    # path('', include('archivesuploads.urls')),
     path('', include('newsandevents.urls')),
     path('', include('cms.urls')),
 
