@@ -88,7 +88,7 @@
 
 
 #theme-image {
-  height: 700px;
+  height: 600px;
   background-image: url('/static/images/theme1.jpg');
   background-attachment: scroll;
   position: relative;
@@ -102,11 +102,20 @@
 #theme-image img{
         display: block;
     }
+    .researchthemecontainer {
+      background-color: white;
+      margin-left: 13%;
+     margin-right: 13%;
+
+
+    }
   </style>
 
+
+
   {% block content %}
-  <div class="container" style="background-color:white;">
-    <div>
+  <div class="container" >
+    <div class="researchthemecontainer">
       {% placeholder "content" %}
     </div>
   </div>
