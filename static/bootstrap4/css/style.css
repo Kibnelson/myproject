@@ -131,6 +131,13 @@ section#lower_navbar {
    }
 
 
+   #centercontent{
+    margin: auto;
+    width: 70%;
+    padding: 2px;
+    
+   }
+
    @media (min-width: 1200px) {
     .container{
         max-width: 1600px !important;
