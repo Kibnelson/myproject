@@ -26,24 +26,20 @@
   li {
     display: inline;
     list-style-type: none;
-    padding-right: 43px; /* spacing and style of nav menus */
-    padding-left: 43px;
-    font: white;
+    padding: 5px; /* spacing and style of nav menus */
+    font: black;
+  }
+
+  #container > li > a {
+    white-space: nowrap;
   }
 
 </style>
 
 <section id="top-bar" class="p-0">
-  <div class="container"  id="centercontent" class="top-bar">
 
-    <nav class="navbar navbar-expand-sm navbar-dark bg-default navbar-custom">
-        <div class="container" class="top-bar">
-
-        <a class="navbar-brand" href="#"></a>
-        <ul class="navbar-nav m-auto">
+        <ul class="container"  id="centercontent" class="top-bar">
           {%  show_menu 0 100 100 100 "menu/custom-menu.html" %}
         </ul>
-      </div>
-    </nav>
-    </div>
+    
 </section>
